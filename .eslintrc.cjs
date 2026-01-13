@@ -11,7 +11,10 @@ module.exports = {
   ],
   plugins: ['vue', '@typescript-eslint'],
   rules: {
-    'vue/multi-word-component-names': ['error', { ignores: ['index', 'default', 'error'] }],
+    'vue/multi-word-component-names': [
+      'error',
+      { ignores: ['index', 'default', 'error', 'aplikasi', 'mentoring'] },
+    ],
     'vue/no-v-html': 'warn',
     'vue/require-default-prop': 'error',
     'vue/require-prop-types': 'error',
