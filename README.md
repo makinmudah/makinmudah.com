@@ -162,13 +162,70 @@ Returns server status and timestamp:
 
 ## Deployment
 
-The application is configured for deployment. Configure your deployment platform according to your needs:
+The application is deployed at **makinmudah.com**.
+
+### Deployment Configuration
 
 - **Build Command**: `npm run build`
 - **Output Directory**: `.output/public`
 - **Node Version**: 20.11.0 (see `.nvmrc`)
 
-Environment variables from `.env.example` should be configured in your deployment platform.
+### Environment Variables
+
+Set the following environment variables in your deployment platform:
+
+```env
+NUXT_PUBLIC_SITE_URL=https://makinmudah.com
+NUXT_PUBLIC_SITE_NAME=Makin Mudah
+NODE_ENV=production
+NUXT_DEVTOOLS=false
+```
+
+### DNS Configuration
+
+To make the site accessible at makinmudah.com, configure your DNS records:
+
+1. **Root Domain (makinmudah.com)**:
+   - Add an `A` record pointing to your hosting provider's IP address, OR
+   - Add an `ALIAS`/`ANAME` record pointing to your deployment (e.g., `yourproject.vercel.app`)
+
+2. **WWW Subdomain (www.makinmudah.com)**:
+   - Add a `CNAME` record pointing to your deployment or root domain
+
+3. **SSL Certificate**:
+   - Most hosting platforms (Vercel, Netlify, etc.) automatically provision SSL certificates
+   - Verify HTTPS is working at https://makinmudah.com
+
+### Custom Domain Setup (Platform-Specific)
+
+**For Vercel:**
+
+```bash
+# Add domain in Vercel dashboard
+1. Go to Project Settings → Domains
+2. Add "makinmudah.com" and "www.makinmudah.com"
+3. Follow DNS configuration instructions provided
+4. Wait for DNS propagation (5-60 minutes)
+```
+
+**For Netlify:**
+
+```bash
+# Add domain in Netlify dashboard
+1. Go to Domain Settings → Add custom domain
+2. Add "makinmudah.com"
+3. Configure DNS records as instructed
+4. Enable HTTPS
+```
+
+**For Cloudflare Pages:**
+
+```bash
+# Add domain in Cloudflare dashboard
+1. Go to Pages → Custom domains
+2. Add "makinmudah.com"
+3. DNS automatically configured if using Cloudflare DNS
+```
 
 ## Architecture Documentation
 
