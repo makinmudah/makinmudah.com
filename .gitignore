@@ -1,24 +1,46 @@
-# Nuxt dev/build outputs
-.output
-.data
+# Environment files (never commit secrets!)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+
+# Always commit the example template
+!.env.example
+
+# Nuxt build artifacts
 .nuxt
+.output
+dist
+.vercel
 .nitro
 .cache
-dist
+.data
 
-# Node dependencies
+# Dependencies
 node_modules
 
 # Logs
-logs
 *.log
+logs
 
-# Misc
+# OS files
 .DS_Store
-.fleet
-.idea
+Thumbs.db
 
-# Local env files
-.env
-.env.*
-!.env.example
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+.fleet
+
+# Test coverage
+coverage
+test-results
+playwright-report
+
+# Local certificates
+*.pem
+*.key
+*.crt
