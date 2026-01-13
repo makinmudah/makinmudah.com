@@ -25,6 +25,12 @@ export default defineNuxtConfig({
     },
   },
 
+  vite: {
+    server: {
+      allowedHosts: ['makinmudah.com'],
+    },
+  },
+
   runtimeConfig: {
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
