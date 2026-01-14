@@ -262,7 +262,7 @@ makinmudah.com/
 ├── .env.example                  # Environment variables template
 ├── .eslintrc.cjs                 # ESLint configuration
 ├── .gitignore
-├── .nvmrc                        # Node version (20.11.0)
+├── .nvmrc                        # Node version (24.12.0)
 ├── .prettierrc                   # Prettier configuration
 ├── nuxt.config.ts                # Nuxt configuration
 ├── package.json
@@ -3020,7 +3020,7 @@ brew install redis     # For local rate limiting testing
 **File: `.nvmrc`**
 
 ```
-20.11.0
+24.12.0
 ```
 
 **VS Code Extensions:**

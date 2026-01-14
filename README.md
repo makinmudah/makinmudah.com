@@ -8,7 +8,7 @@ Makin Mudah is a comprehensive web platform featuring a landing page, product ca
 
 ## Prerequisites
 
-- **Node.js**: 20.11.0 or higher (LTS recommended)
+- **Node.js**: 24.12.0 or higher (LTS recommended)
 - **npm**: 9+ or compatible package manager
 - **Git**: For version control
 
@@ -168,7 +168,7 @@ The application is deployed at **makinmudah.com**.
 
 - **Build Command**: `npm run build`
 - **Output Directory**: `.output/public`
-- **Node Version**: 20.11.0 (see `.nvmrc`)
+- **Node Version**: 24.12.0 (see `.nvmrc`)
 
 ### Environment Variables
 

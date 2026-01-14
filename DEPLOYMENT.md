@@ -301,7 +301,7 @@ Watch the deployment in your platform's dashboard.
 - Check server-side logs in platform dashboard
 - Verify `server/` directory is included in deployment
 - Check `NUXT_PUBLIC_SITE_URL` environment variable
-- Ensure Node version matches `.nvmrc` (20.11.0)
+- Ensure Node version matches `.nvmrc` (24.12.0)
 
 ### Issue: Styles not loading (Tailwind CSS)
 
