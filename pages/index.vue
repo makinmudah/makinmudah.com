@@ -8,6 +8,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <HeroSection />
+    <LandingHeroSection />
   </div>
 </template>
