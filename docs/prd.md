@@ -19,13 +19,13 @@
 
 The COVID-19 digital acceleration has created urgent demand for IT solutions across Indonesia, but non-technical users remain underserved and intimidated. Indonesian small business owners (64+ million MSMEs, only ~13% digitally integrated) face complexity intimidation, contract fears, and installation barriers when seeking IT solutions. Simultaneously, Indonesian students face a 600,000-worker digital talent gap, with affordable mentorship (Rp 5-20 million bootcamps are out of reach) and structured learning paths unavailable.
 
-Makin Mudah Landing Page solves this accessibility barrier through a "show, don't tell" strategy using culturally native Indonesian messaging ("Hidup Makin Mudah dengan Makin Mudah"), transparent flexible pricing ("Bayar Seperlumu, Bayar Semaumu"), and dual self-directed paths (business applications via "Intip Yuk" / student mentoring via "Mulai Dulu"). The page serves as the gateway to products under development (POS systems, Learning Courses) and will validate the dual-sided network effects model where students become talent for businesses using Makin Mudah tools.
+Makin Mudah Landing Page solves this accessibility barrier through a "show, don't tell" strategy using culturally native Indonesian messaging ("Hidup makin mudah dengan Makin Mudah"), transparent flexible pricing ("Bayar Seperlumu, Bayar Semaumu"), and dual self-directed paths (business applications via "Intip Yuk" / student mentoring via "Mulai Dulu"). The page serves as the gateway to products under development (POS systems, Learning Courses) and will validate the dual-sided network effects model where students become talent for businesses using Makin Mudah tools.
 
 ### Change Log
 
-| Date | Version | Description | Author |
-|------|---------|-------------|--------|
-| 2026-01-13 | 1.0 | Initial PRD creation (Goals section) - IN PROGRESS | PM John |
+| Date       | Version | Description                                        | Author  |
+| ---------- | ------- | -------------------------------------------------- | ------- |
+| 2026-01-13 | 1.0     | Initial PRD creation (Goals section) - IN PROGRESS | PM John |
 
 ---
 
@@ -33,7 +33,7 @@ Makin Mudah Landing Page solves this accessibility barrier through a "show, don'
 
 ### Functional
 
-**FR1:** The landing page shall display an animated hero section with the headline "Hidup Makin Mudah dengan Makin Mudah" using typing animation effect, responsive sizing, and emphasized brand words.
+**FR1:** The landing page shall display an animated hero section with the headline "Hidup makin mudah dengan Makin Mudah" using typing animation effect, responsive sizing, and emphasized brand words.
 
 **FR2:** The hero section shall present two side-by-side CTA buttons labeled "Intip Yuk" (business path) and "Mulai Dulu" (student path) that navigate to respective catalogue pages.
 
@@ -102,6 +102,7 @@ Makin Mudah Landing Page solves this accessibility barrier through a "show, don'
 The Makin Mudah landing page embodies **approachable technology** through a clean, unintimidating interface that proves simplicity through its own design. The UX prioritizes **immediate comprehension** (users understand value within 10 seconds) and **friction removal** at every interaction point. The design language is warm, friendly, and distinctly Indonesian—using conversational tone, cultural wordplay, and familiar patterns rather than corporate formality. Visual hierarchy guides users naturally from hero → value props → problem/solution → FAQ → conversion without overwhelming or confusing. The experience feels like a helpful friend explaining technology, not a sales pitch.
 
 **Key UX Principles:**
+
 - **Clarity over cleverness** - Every element has obvious purpose
 - **Mobile-first thinking** - Thumb-friendly tap targets, readable text, fast loading
 - **Progressive disclosure** - Show enough to intrigue, reveal details on demand (accordion FAQ)
@@ -123,6 +124,7 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 ### Core Screens and Views
 
 **1. Landing Page (Homepage)**
+
 - Hero section with animated headline + dual CTAs
 - Value Propositions (3-column cards)
 - Problem → Solution with visual demos
@@ -131,12 +133,14 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 - Footer
 
 **2. Applications Catalogue Page**
+
 - Netflix-style card grid showing business applications
 - Each card: product name, short description, "Coming Soon" or status badge
 - Optional: filter/sort controls (future enhancement)
 - Back to home navigation
 
 **3. Mentoring Services Catalogue Page**
+
 - Netflix-style card grid showing learning courses and mentoring options
 - Each card: service name, short description, "Coming Soon" or status badge
 - Optional: filter/sort controls (future enhancement)
@@ -147,6 +151,7 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 ### Accessibility: WCAG 2.1 Level AA
 
 **Compliance Requirements:**
+
 - **Color Contrast:** Minimum 4.5:1 for normal text, 3:1 for large text (teal #14B8A6 on white, navy #1E3A8A text meet this)
 - **Keyboard Navigation:** All interactive elements (CTAs, accordion, links) accessible via Tab/Enter/Space
 - **Screen Reader Support:** Semantic HTML, ARIA labels for icon-only elements, alt text for all images/GIFs
@@ -161,18 +166,21 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 **Brand Identity:**
 
 **Color Palette:**
+
 - Primary: Teal (#14B8A6) - main brand color for CTAs, accents
 - Secondary: Deep Navy (#1E3A8A) - headings, important text
 - Accent: Warm Orange (#F59E0B) - highlights, hover states
 - Neutrals: White (#FFFFFF) backgrounds, grays for text hierarchy
 
 **Typography:**
+
 - Font Family: **Inter** (Google Font, free, excellent Indonesian character support)
 - Headlines: 700-800 weight, generous line-height
 - Body: 400 weight, optimized for readability on mobile
 - All text in Indonesian with culturally adapted phrasing
 
 **Visual Style:**
+
 - Minimalist, flat design (no heavy shadows or 3D effects)
 - Outlined icons (stroke style, 2px weight, rounded corners)
 - Friendly illustrations where needed (avoid generic stock photos)
@@ -180,6 +188,7 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 - Rounded corners on cards and buttons (friendly, approachable)
 
 **Voice & Tone:**
+
 - Casual Indonesian ("Yuk", "Intip", "Gampang kok!")
 - Friend helping friend, not corporation selling
 - Honest, transparent, encouraging
@@ -192,16 +201,19 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 **Primary:** Mobile-first responsive web (70%+ expected traffic from smartphones)
 
 **Supported Devices:**
+
 - **Mobile:** 375px-768px viewport (portrait orientation priority)
 - **Tablet:** 768px-1024px viewport
 - **Desktop:** 1024px+ viewport
 
 **Browser Support:**
+
 - Mobile: Chrome Android 90+, Safari iOS 13+, Samsung Internet 14+
 - Desktop: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
 - No IE11 support
 
 **Breakpoint Strategy:**
+
 - Mobile-first CSS (default styles for small screens, media queries scale up)
 - 3-column value props become 1-column stack on mobile
 - Side-by-side CTAs remain side-by-side even on mobile (thumb-friendly, not stacked)
@@ -216,12 +228,14 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 **Decision:** Single monorepo containing landing page, catalogue pages, and shared components.
 
 **Rationale:**
+
 - MVP scope is small enough (3 pages) that monorepo overhead is minimal
 - Shared components (header, footer, CTA buttons, card layouts) benefit from single source of truth
 - Simplifies deployment (one build, one deploy) on Vercel/Netlify
 - Future migration to proper monorepo tool (Turborepo, Nx) possible when adding backend services
 
 **Structure:**
+
 ```
 /
 ├── pages/              # Nuxt pages (index.vue, catalogue-apps.vue, catalogue-mentoring.vue)
@@ -238,6 +252,7 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 **Decision:** Static Site Generation (SSG) with client-side analytics and optional serverless functions for future needs.
 
 **Rationale:**
+
 - **MVP:** Pure static site generated at build time via Nuxt SSG
   - Maximum performance (<3s load time on 3G)
   - Excellent SEO (pre-rendered HTML with meta tags, structured data)
@@ -256,6 +271,7 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
   - Payment processing
 
 **Technologies:**
+
 - **Build:** Nuxt 3 SSG mode (generates static HTML/CSS/JS at build time)
 - **Runtime:** Client-side JavaScript for interactivity (accordion, analytics tracking, animations)
 - **APIs:** None for MVP; future integration with backend services via REST or GraphQL
@@ -265,6 +281,7 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 **Decision:** Unit + Integration testing for MVP, with manual QA supplementing automated tests.
 
 **Test Coverage:**
+
 - **Unit Tests:** Critical business logic (if any), utility functions, composables
   - Framework: Vitest (recommended for Nuxt 3)
   - Coverage target: 70%+ for utility code
@@ -288,6 +305,7 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
   - User testing with 5-10 people from each target segment
 
 **Testing Strategy:**
+
 - Test early and often (TDD for critical components)
 - Automated tests run on every pull request
 - Manual QA before each deployment
@@ -296,30 +314,36 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 ### Additional Technical Assumptions and Requests
 
 **Frontend Framework:**
+
 - **Nuxt 3** (Vue 3 framework) for SSG capabilities and excellent SEO support
 - **Rendering:** Static Site Generation (pre-render all pages at build time)
 - **Vue Version:** Vue 3 with Composition API for modern, maintainable code
 
 **Styling:**
+
 - **Tailwind CSS** for utility-first styling (rapid development, small bundle size with PurgeCSS)
 - **Component Library:** HeadlessUI Vue or Radix Vue for accessible accordion, modals (future)
 - **Custom CSS:** Minimal custom styles beyond Tailwind utilities
 
 **Animation:**
+
 - **Hero typing animation:** GSAP or simple CSS keyframes (lightweight, performant)
 - **Scroll animations:** Intersection Observer API for triggering animations on scroll
 - **Smooth scroll:** CSS `scroll-behavior: smooth` or lightweight JS library
 
 **Icons:**
+
 - **Icon Set:** Heroicons, Lucide Icons, or Phosphor Icons (outlined style, consistent stroke weight)
 - **Format:** SVG inline for performance and styling flexibility
 
 **Analytics:**
+
 - **Google Analytics 4** with custom event tracking (CTA clicks, scroll depth, FAQ interactions)
 - **Google Tag Manager** for flexibility to add more tracking tools without code changes
 - **Privacy:** Implement cookie consent if required by Indonesian PDP law
 
 **SEO:**
+
 - **Meta tags:** Managed via Nuxt's useHead() composable (dynamic per page)
 - **Structured data:** JSON-LD for FAQ schema (rich snippets)
 - **Sitemap:** Auto-generated via @nuxtjs/sitemap module
@@ -327,12 +351,14 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 - **Open Graph:** Images and descriptions for social sharing
 
 **Performance Optimization:**
+
 - **Image optimization:** Nuxt Image module for automatic lazy loading, WebP conversion
 - **Code splitting:** Automatic via Nuxt (route-based chunking)
 - **Bundle optimization:** Vite for fast builds, tree-shaking, minification
 - **CDN:** Vercel/Netlify Edge Network for global distribution with Jakarta/Singapore PoPs
 
 **Hosting & Deployment:**
+
 - **Primary:** Vercel (excellent Nuxt support) OR Netlify (equivalent features)
 - **Free tier:** Sufficient for MVP (100GB bandwidth, unlimited builds)
 - **Domain:** makinmudah.com (assume already owned or to be purchased)
@@ -340,27 +366,32 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 - **CI/CD:** GitHub Actions or built-in Vercel/Netlify deploy on git push
 
 **Error Tracking:**
+
 - **Sentry** (free tier) for client-side error monitoring
 - **LogRocket** (optional, future) for session replay and debugging
 
 **Development Tools:**
+
 - **Package Manager:** pnpm or npm (consistent across team)
 - **Code Quality:** ESLint + Prettier for linting and formatting
 - **Git:** GitHub for version control
 - **Editor:** VSCode with Vue extension recommended
 
 **Browser Support:**
+
 - **No polyfills needed** for modern browsers (Chrome 90+, Safari 13+)
 - **Transpilation:** Vite handles necessary transforms
 - **CSS:** Modern features (Grid, Flexbox, CSS variables) safe to use
 
 **Constraints:**
+
 - **Budget:** Free tier hosting only (Vercel/Netlify)
 - **Timeline:** 4-6 weeks from approval to launch
 - **Resources:** 1-2 developers (solo or small team)
 - **No existing backend:** Greenfield project, no legacy systems to integrate
 
 **Future Integrations (Out of Scope for MVP):**
+
 - CRM (HubSpot, Pipedrive, or simple Airtable)
 - Email marketing (Mailchimp, SendGrid)
 - Payment gateway (Midtrans for Indonesia)
@@ -372,9 +403,11 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 ## Epic List
 
 ### Epic 1: Foundation & Complete Landing Page
+
 **Goal:** Establish Nuxt project infrastructure and deliver fully functional landing page with all sections (hero, value props, problem/solution, FAQ, final CTA) deployed to production.
 
 ### Epic 2: Catalogue Pages, Analytics & SEO Optimization
+
 **Goal:** Build applications and mentoring catalogue pages with Netflix-style cards, integrate Google Analytics 4 event tracking, implement comprehensive SEO (meta tags, structured data, sitemap), and optimize performance to meet Lighthouse targets.
 
 ---
@@ -410,7 +443,7 @@ The Makin Mudah landing page embodies **approachable technology** through a clea
 
 **Acceptance Criteria:**
 
-1. Hero section displays headline "Hidup Makin Mudah dengan Makin Mudah" with "Makin Mudah" words emphasized (bold/different color)
+1. Hero section displays headline "Hidup makin mudah dengan Makin Mudah" with "Makin Mudah" words emphasized (bold/different color)
 2. Headline has typing animation effect on page load using GSAP or CSS keyframes
 3. Headline is responsive: scales fluidly across mobile (24-32px), tablet (32-40px), desktop (40-56px) using clamp()
 4. Two CTA buttons displayed side-by-side: "Intip Yuk" (teal background) and "Mulai Dulu" (orange background)
@@ -778,11 +811,13 @@ The PRD is comprehensive and provides clear direction for architectural design. 
 ### MVP Scope Analysis
 
 **Appropriately Minimal:**
+
 - Landing page (5 sections) + 2 catalogue pages = minimal viable marketing presence
 - Analytics and SEO support validation goals without bloating scope
 - No premature features (user accounts, payments, actual products)
 
 **Could Cut if Timeline Compresses:**
+
 - Hero typing animation (polish, not essential)
 - Visual demos in Problem/Solution (placeholders acceptable)
 - Breadcrumb navigation (helpful but overkill for 3-page site)
@@ -800,7 +835,7 @@ The PRD is comprehensive and provides clear direction for architectural design. 
 
 ### For UX Expert
 
-**Context:** The PRD defines a dual-audience landing page for Makin Mudah (Indonesian IT solutions + mentoring) targeting small business owners and students. The page uses culturally adapted Indonesian messaging ("Hidup Makin Mudah dengan Makin Mudah"), flexible pricing positioning ("Bayar Seperlumu, Bayar Semaumu"), and self-directed pathways ("Intip Yuk" for business, "Mulai Dulu" for students).
+**Context:** The PRD defines a dual-audience landing page for Makin Mudah (Indonesian IT solutions + mentoring) targeting small business owners and students. The page uses culturally adapted Indonesian messaging ("Hidup makin mudah dengan Makin Mudah"), flexible pricing positioning ("Bayar Seperlumu, Bayar Semaumu"), and self-directed pathways ("Intip Yuk" for business, "Mulai Dulu" for students).
 
 **Your Mission:** Design high-fidelity mockups and visual specifications that bring the PRD's UX vision to life with warm, approachable, distinctly Indonesian design language.
 
@@ -829,6 +864,7 @@ The PRD is comprehensive and provides clear direction for architectural design. 
 - Catalogue page mockups: Netflix-style card layout, applications vs mentoring differentiation
 
 **Design System Foundation:**
+
 - **Primary Color:** Teal #14B8A6 (trust, accessibility, modern)
 - **Secondary Color:** Deep Navy #1E3A8A (professionalism, contrast)
 - **Accent Color:** Warm Orange #F59E0B (energy, action, friendliness)
@@ -837,12 +873,14 @@ The PRD is comprehensive and provides clear direction for architectural design. 
 - **Tone:** Warm, friendly, conversational - like a helpful friend, not a sales pitch
 
 **Reference Documents:**
+
 - Full PRD: docs/prd.md
 - User Personas & Insights: docs/brief.md (Target Users section)
 - Brainstorming Session: docs/brainstorming-session-results.md (Journey Mapping section)
 
 **Success Criteria:**
 Your designs succeed when:
+
 - Users understand core value proposition within 10 seconds of landing
 - CTA paths feel obvious and non-intimidating
 - Design authentically represents Indonesian cultural context
@@ -904,6 +942,7 @@ Your designs succeed when:
 - SEO implementation guide: meta tag patterns, structured data templates
 
 **Performance Constraints (Non-Negotiable):**
+
 - LCP <2.5s on throttled 3G (Lighthouse simulation)
 - JavaScript budget: 100KB (landing), 150KB (catalogue) gzipped
 - CSS budget: 50KB gzipped
@@ -911,16 +950,19 @@ Your designs succeed when:
 - Core Web Vitals: LCP <2.5s, FID <100ms, CLS <0.1
 
 **Browser Support Matrix:**
+
 - Mobile: Chrome Android 90+, Safari iOS 13+, Samsung Internet 14+
 - Desktop: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
 
 **Reference Documents:**
+
 - Full PRD: docs/prd.md (especially Technical Assumptions section)
 - Performance Requirements: docs/prd.md (NFR1-NFR5)
 - Story Details: docs/prd.md (Epic 1 & 2 for implementation specifics)
 
 **Success Criteria:**
 Your architecture succeeds when:
+
 - All performance budgets enforced via build-time checks (fail build if exceeded)
 - Lighthouse CI automated in pipeline with 90+ thresholds
 - Component structure enables parallel development (multiple devs can work independently)
@@ -930,6 +972,7 @@ Your architecture succeeds when:
 ---
 
 **Reference Documents:**
+
 - Project Brief: docs/brief.md
 - Brainstorming Session Results: docs/brainstorming-session-results.md
 - FAQ Content (Complete Answers): docs/faq-content.md

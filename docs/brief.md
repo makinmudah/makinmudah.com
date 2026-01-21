@@ -11,12 +11,13 @@
 **The Problem:** Non-technical Indonesian users face a paralyzing barrier when seeking IT solutions—existing providers overwhelm with technical jargon, lock customers into expensive long-term contracts, and offer no hand-holding for beginners. This creates fear, hesitation, and ultimately inaction, leaving potential users stuck with manual processes or inadequate tools.
 
 **Target Market:**
+
 - Primary: Indonesian small business owners (retail, services, SMEs) with zero IT expertise
 - Secondary: Indonesian students (university/college level) seeking IT skills and career preparation
 
 **The Solution Approach:** A web-based landing page that immediately demonstrates value through free, accessible tools or assessments, proving simplicity before asking for commitment. Users self-select their journey (business applications or learning/mentoring) while experiencing unified brand values: transparency, affordability, and continuous support.
 
-**Key Value Proposition:** "Hidup Makin Mudah dengan Makin Mudah" - Simple, web-based IT solutions and mentoring with transparent, flexible pricing ("Bayar Seperlumu, Bayar Semaumu"), no lock-in contracts, and mentor-supported learning that ensures users never struggle alone.
+**Key Value Proposition:** "Hidup makin mudah dengan Makin Mudah" - Simple, web-based IT solutions and mentoring with transparent, flexible pricing ("Bayar Seperlumu, Bayar Semaumu"), no lock-in contracts, and mentor-supported learning that ensures users never struggle alone.
 
 ---
 
@@ -51,18 +52,21 @@ Indonesian students face a different but equally frustrating challenge in IT edu
 ### Impact of the Problem
 
 **Quantifiable Business Impact:**
+
 - Indonesia has 64+ million MSMEs (Micro, Small, Medium Enterprises), with only ~13% digitally integrated (Ministry of Cooperatives data, 2021)
 - Lost productivity and revenue opportunities due to manual processes
 - Competitive disadvantage against digitized competitors
 - Barriers to e-commerce participation (market growing 20%+ annually)
 
 **Quantifiable Student Impact:**
+
 - Indonesia's digital talent gap estimated at 600,000 workers (2022 reports)
 - Unemployment among fresh graduates while tech jobs go unfilled
 - Income opportunity loss (IT roles pay 2-3x traditional entry positions)
 - Career mobility limitations for non-CS graduates wanting tech transitions
 
 **Emotional/Social Impact:**
+
 - Business owners feel "left behind" by digital transformation, experiencing shame and anxiety
 - Students feel inadequate and excluded from lucrative tech careers
 - Communities miss out on innovation that could solve local problems
@@ -70,12 +74,14 @@ Indonesian students face a different but equally frustrating challenge in IT edu
 ### Why Existing Solutions Fall Short
 
 **Current IT Service Providers:**
+
 - Target enterprise customers with complex offerings inappropriate for SMEs
 - Use English-dominant interfaces and support (language barrier)
 - Prioritize features over simplicity, creating bloated products
 - Lack empathy for non-technical users' mental models
 
 **Existing Learning Platforms:**
+
 - Western-centric content (examples, case studies, pricing in USD)
 - Assume always-available mentorship isn't needed (self-directed learning bias)
 - Community forums in English or too large to provide personalized help
@@ -110,27 +116,32 @@ The **Makin Mudah Landing Page** solves the accessibility barrier through a "sho
 ### Key Differentiators from Existing Solutions
 
 **1. Indonesian-First, Culturally Native**
-- Not translated content, but culturally adapted messaging ("Hidup Makin Mudah dengan Makin Mudah" wordplay, "Intip Yuk" casual tone)
+
+- Not translated content, but culturally adapted messaging ("Hidup makin mudah dengan Makin Mudah" wordplay, "Intip Yuk" casual tone)
 - Addresses specifically Indonesian pain points (MSME digitization, local job market for students)
 - Pricing in Rupiah with local context (Rp 5-20 million bootcamp comparison)
 
 **2. Trust Through Transparency**
+
 - "Bayar Seperlumu, Bayar Semaumu" pricing messaging addresses contract fear directly
 - Comprehensive FAQ section (7 questions) removes objections before they arise
 - No hidden complexity—what you see is what you get
 
 **3. Unified Dual-Audience Design**
+
 - Serves both businesses and students without building separate sites
 - Acknowledges both audiences have shared needs (simplicity, affordability, support)
 - Creates community feel—businesses and students learning together
 
 **4. Technology as Enabler, Not Barrier**
+
 - Web-based (no installation) removes IT dependency
 - Nuxt-based SEO optimization ensures discoverability
 - Mobile-first responsive design meets users where they are
 - Performance-optimized for Indonesian internet speeds
 
 **5. Proof Before Commitment**
+
 - Visual demos (GIFs of UI simplicity, payment flexibility visuals) make abstract concrete
 - Free entry tools demonstrate value immediately
 - Netflix-style catalogue cards (post-CTA) let users browse without pressure
@@ -169,6 +180,7 @@ The ultimate success is when "Makin Mudah" becomes synonymous with "accessible I
 ### Primary User Segment: Small Business Owners (SME Operators)
 
 **Demographic/Firmographic Profile:**
+
 - **Age:** 30-55 years old
 - **Location:** Urban and semi-urban Indonesia (Jakarta, Surabaya, Bandung, Medan, regional cities)
 - **Business Type:** Retail shops, restaurants/cafes, service businesses (salons, repair shops), small manufacturing
@@ -178,6 +190,7 @@ The ultimate success is when "Makin Mudah" becomes synonymous with "accessible I
 - **Language:** Indonesian native speakers, limited English proficiency
 
 **Current Behaviors and Workflows:**
+
 - Manage inventory with notebooks, spreadsheets, or memory
 - Track sales through cash registers or manual receipts
 - Communicate with customers via WhatsApp, not CRM systems
@@ -187,6 +200,7 @@ The ultimate success is when "Makin Mudah" becomes synonymous with "accessible I
 - Avoid software trials due to fear of commitment or hidden costs
 
 **Specific Needs and Pain Points:**
+
 - **Need simplicity:** Tools must work without IT support or technical training
 - **Need affordability:** Cannot commit to expensive long-term contracts with uncertain ROI
 - **Need accessibility:** Must work on their existing devices (smartphones, basic laptops) without special setup
@@ -195,6 +209,7 @@ The ultimate success is when "Makin Mudah" becomes synonymous with "accessible I
 - **Pain: Jargon anxiety:** Technical terminology makes them feel inadequate and excluded
 
 **Goals They're Trying to Achieve:**
+
 - Streamline daily operations to save time and reduce errors
 - Understand their business performance (what's selling, what's profitable)
 - Compete with larger businesses that have IT advantages
@@ -205,6 +220,7 @@ The ultimate success is when "Makin Mudah" becomes synonymous with "accessible I
 ### Secondary User Segment: Indonesian Students (IT Learners)
 
 **Demographic Profile:**
+
 - **Age:** 18-25 years old
 - **Education Level:** University/college students (any major) or recent graduates
 - **Current Major:** Mix of CS/IT students and non-technical majors (business, humanities, sciences, engineering)
@@ -214,6 +230,7 @@ The ultimate success is when "Makin Mudah" becomes synonymous with "accessible I
 - **Language:** Indonesian native, intermediate English (can read tutorials but prefer Indonesian)
 
 **Current Behaviors and Workflows:**
+
 - Browse free YouTube tutorials and online courses inconsistently
 - Join Telegram/WhatsApp groups for coding help, get lost in noise
 - Start multiple learning paths, abandon when overwhelmed or stuck
@@ -223,6 +240,7 @@ The ultimate success is when "Makin Mudah" becomes synonymous with "accessible I
 - Apply to jobs requiring skills they don't have, face rejection
 
 **Specific Needs and Pain Points:**
+
 - **Need structure:** Clear learning path from beginner to job-ready
 - **Need affordability:** Cannot pay Rp 5-20 million for bootcamps
 - **Need mentorship:** Someone to ask when stuck, provide career guidance, keep them accountable
@@ -232,6 +250,7 @@ The ultimate success is when "Makin Mudah" becomes synonymous with "accessible I
 - **Pain: Local job market disconnect:** International tutorials don't prepare for Indonesian tech job requirements
 
 **Goals They're Trying to Achieve:**
+
 - Build job-ready IT skills to enter tech industry or enhance current career
 - Complete real projects for portfolio to show employers
 - Gain confidence through guided learning with expert validation
@@ -291,7 +310,7 @@ The ultimate success is when "Makin Mudah" becomes synonymous with "accessible I
 
 ### Core Features (Must Have)
 
-- **Hero Section with Dual CTAs:** Animated headline "Hidup Makin Mudah dengan Makin Mudah" (responsive sizing, typing animation, emphasized brand words) + side-by-side CTA buttons [Intip Yuk] [Mulai Dulu] that clearly differentiate business vs student paths
+- **Hero Section with Dual CTAs:** Animated headline "Hidup makin mudah dengan Makin Mudah" (responsive sizing, typing animation, emphasized brand words) + side-by-side CTA buttons [Intip Yuk] [Mulai Dulu] that clearly differentiate business vs student paths
   - **Rationale:** First impression is critical; dual CTAs enable self-selection immediately while animated headline creates engaging, modern feel
 
 - **Value Propositions Section (3-Column Visual):** Three icons (price tag, browser, hands helping) with messaging for pricing flexibility ("Bayar Seperlumu, Bayar Semaumu"), no installation ("Tanpa Instalasi, Buka Dimana Saja"), and mentorship ("Didampingi Mentor")
@@ -412,22 +431,27 @@ The landing page evolves from standalone marketing site to gateway of interconne
 ### Expansion Opportunities
 
 **Geographic Expansion:**
+
 - Adapt landing page strategy for other Southeast Asian markets (Malaysia, Thailand, Philippines) with similar digital divide challenges
 - Localize messaging, pricing, and cultural references while maintaining core "accessible IT" positioning
 
 **Vertical-Specific Landing Pages:**
+
 - Create industry-specific variations (retail, restaurant, salon, tutoring services) with tailored messaging and product recommendations
 - Maintain shared design system and brand consistency
 
 **Partner Integration:**
+
 - Landing page becomes white-label template for Makin Mudah partners or affiliates
 - Referral program landing pages with personalized codes and incentives
 
 **Offline-to-Online Bridge:**
+
 - QR codes on physical marketing materials (flyers, posters, events) link to personalized landing page experiences
 - Integration with offline workshops or pop-up demos that drive to landing page for follow-up
 
 **API/Platform Play:**
+
 - Landing page becomes discovery layer for third-party developers building on Makin Mudah platform
 - "Built with Makin Mudah" badge ecosystem where partners drive traffic back
 
@@ -614,7 +638,7 @@ The landing page evolves from standalone marketing site to gateway of interconne
 - Competitive landscape analysis (Who are the actual competitors in Indonesian market? How do they position?)
 - Keyword research for Indonesian IT solution searches (Validate SEO traffic assumptions)
 - Pricing benchmarking (What do similar services cost in Indonesia? What's "affordable"?)
-- User testing of messaging (Does "Hidup Makin Mudah dengan Makin Mudah" resonate? Is it cheesy or clever?)
+- User testing of messaging (Does "Hidup makin mudah dengan Makin Mudah" resonate? Is it cheesy or clever?)
 - Technical feasibility of smart floating CTA (How complex is scroll tracking + adaptation logic?)
 
 ---
@@ -645,5 +669,5 @@ The brief is ready for PRD generation when open questions are resolved and immed
 
 ---
 
-*Project Brief created by Business Analyst Mary based on brainstorming session conducted 2026-01-12*
-*Informed by: Brainstorming Session Results (docs/brainstorming-session-results.md)*
+_Project Brief created by Business Analyst Mary based on brainstorming session conducted 2026-01-12_
+_Informed by: Brainstorming Session Results (docs/brainstorming-session-results.md)_

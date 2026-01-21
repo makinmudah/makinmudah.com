@@ -14,7 +14,7 @@
       <h1
         class="mb-8 animate-slide-up text-[clamp(1.5rem,5vw,2rem)] font-bold leading-tight text-navy-900 md:text-[clamp(2rem,4vw,2.5rem)] lg:text-[clamp(2.5rem,4vw,3.5rem)]"
       >
-        Hidup <span class="font-bold text-teal-500">Makin Mudah</span> dengan
+        Hidup makin mudah dengan
         <span class="font-bold text-teal-500">Makin Mudah</span>
       </h1>
 

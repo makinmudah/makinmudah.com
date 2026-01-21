@@ -30,6 +30,7 @@
 **Selected Framework:** Nuxt 3 (latest stable: ^3.13.0)
 
 **Rationale:**
+
 - **File-based routing:** Automatic route generation from `pages/` directory
 - **SSG support:** Static site generation for optimal SEO and performance
 - **SEO built-in:** Auto-generated meta tags, sitemaps, structured data
@@ -47,6 +48,7 @@ npm install
 ```
 
 **Why not use a starter template:**
+
 - Avoid unnecessary dependencies and bloat
 - Full control over architecture decisions
 - Simpler to understand and maintain
@@ -91,49 +93,53 @@ makinmudah.com/
 
 ### Complete Technology Table
 
-| Category | Technology | Version | Purpose | Rationale |
-|----------|-----------|---------|---------|-----------|
-| **Framework** | Nuxt 3 | ^3.13.0 | Vue 3 SSG framework | File-based routing, SEO, SSG support |
-| **UI Library** | Vue 3 | ^3.4.0 | Reactive UI components | Composition API, TypeScript support |
-| **Build Tool** | Vite | ^5.0.0 | Fast builds & HMR | Bundled with Nuxt, 10x faster than Webpack |
-| **Styling** | Tailwind CSS | ^3.4.0 | Utility-first CSS | Rapid development, small bundle (PurgeCSS) |
-| **Component Library** | HeadlessUI Vue | ^1.7.0 | Accessible components | 5KB, WCAG compliant, unstyled primitives |
-| **Icons** | Heroicons | ^2.1.0 | SVG icon library | Designed for Tailwind, 3 styles (outline/solid/mini) |
-| **HTTP Client** | $fetch (ofetch) | Built-in | Server/client requests | Nuxt's unified fetch API |
-| **Form Handling** | Native Vue 3 | Built-in | Form state & validation | No library needed for MVP scope |
-| **Email Service** | Resend | ^3.2.0 | Transactional email | 3K emails/month free, modern API, great DX |
-| **Email Fallback** | Nodemailer | ^6.9.0 | SMTP client | Backup if Resend unavailable |
-| **Spam Protection** | reCAPTCHA v3 | ^3.0.0 | Invisible spam detection | Optional, 15KB bundle (only if needed) |
-| **Rate Limiting** | LRU Cache | ^10.0.0 | In-memory rate limiting | Lightweight, 2KB, sufficient for single instance |
-| **Redis Client** | Upstash Redis | ^1.28.0 | Distributed rate limiting | Optional, for multi-instance deployments |
-| **Testing (Unit)** | Vitest | ^1.2.0 | Component/unit tests | Fast, native ESM, Vite integration |
-| **Testing (E2E)** | Playwright | ^1.41.0 | End-to-end tests | Multi-browser, network throttling, great DX |
-| **Testing (A11y)** | @axe-core/playwright | ^4.8.0 | Accessibility testing | Automates WCAG 2.1 AA compliance |
-| **Testing Library** | @testing-library/vue | ^8.0.0 | User-centric tests | Query by accessible names, not implementation |
-| **Code Quality** | ESLint | ^8.56.0 | Linting | Code quality, catch errors |
-| **Formatting** | Prettier | ^3.2.0 | Code formatting | Consistent style, auto-format |
-| **Type Checking** | TypeScript | ^5.3.0 | Static types | Catch errors early, better IDE support |
-| **Git Hooks** | simple-git-hooks | ^2.9.0 | Pre-commit automation | Lighter than husky, 1KB |
-| **Staged Files** | lint-staged | ^15.2.0 | Lint only changed files | Fast pre-commit checks |
+| Category              | Technology           | Version  | Purpose                   | Rationale                                            |
+| --------------------- | -------------------- | -------- | ------------------------- | ---------------------------------------------------- |
+| **Framework**         | Nuxt 3               | ^3.13.0  | Vue 3 SSG framework       | File-based routing, SEO, SSG support                 |
+| **UI Library**        | Vue 3                | ^3.4.0   | Reactive UI components    | Composition API, TypeScript support                  |
+| **Build Tool**        | Vite                 | ^5.0.0   | Fast builds & HMR         | Bundled with Nuxt, 10x faster than Webpack           |
+| **Styling**           | Tailwind CSS         | ^3.4.0   | Utility-first CSS         | Rapid development, small bundle (PurgeCSS)           |
+| **Component Library** | HeadlessUI Vue       | ^1.7.0   | Accessible components     | 5KB, WCAG compliant, unstyled primitives             |
+| **Icons**             | Heroicons            | ^2.1.0   | SVG icon library          | Designed for Tailwind, 3 styles (outline/solid/mini) |
+| **HTTP Client**       | $fetch (ofetch)      | Built-in | Server/client requests    | Nuxt's unified fetch API                             |
+| **Form Handling**     | Native Vue 3         | Built-in | Form state & validation   | No library needed for MVP scope                      |
+| **Email Service**     | Resend               | ^3.2.0   | Transactional email       | 3K emails/month free, modern API, great DX           |
+| **Email Fallback**    | Nodemailer           | ^6.9.0   | SMTP client               | Backup if Resend unavailable                         |
+| **Spam Protection**   | reCAPTCHA v3         | ^3.0.0   | Invisible spam detection  | Optional, 15KB bundle (only if needed)               |
+| **Rate Limiting**     | LRU Cache            | ^10.0.0  | In-memory rate limiting   | Lightweight, 2KB, sufficient for single instance     |
+| **Redis Client**      | Upstash Redis        | ^1.28.0  | Distributed rate limiting | Optional, for multi-instance deployments             |
+| **Testing (Unit)**    | Vitest               | ^1.2.0   | Component/unit tests      | Fast, native ESM, Vite integration                   |
+| **Testing (E2E)**     | Playwright           | ^1.41.0  | End-to-end tests          | Multi-browser, network throttling, great DX          |
+| **Testing (A11y)**    | @axe-core/playwright | ^4.8.0   | Accessibility testing     | Automates WCAG 2.1 AA compliance                     |
+| **Testing Library**   | @testing-library/vue | ^8.0.0   | User-centric tests        | Query by accessible names, not implementation        |
+| **Code Quality**      | ESLint               | ^8.56.0  | Linting                   | Code quality, catch errors                           |
+| **Formatting**        | Prettier             | ^3.2.0   | Code formatting           | Consistent style, auto-format                        |
+| **Type Checking**     | TypeScript           | ^5.3.0   | Static types              | Catch errors early, better IDE support               |
+| **Git Hooks**         | simple-git-hooks     | ^2.9.0   | Pre-commit automation     | Lighter than husky, 1KB                              |
+| **Staged Files**      | lint-staged          | ^15.2.0  | Lint only changed files   | Fast pre-commit checks                               |
 
 ### Bundle Size Targets
 
 **JavaScript:**
+
 - Landing page: <100KB gzipped
 - Catalogue pages: <150KB gzipped
 - Shared chunks: <50KB gzipped each
 
 **CSS:**
+
 - Global styles: <30KB gzipped
 - Page-specific: <20KB gzipped
 
 **Total Page Weight:**
+
 - Landing page: <500KB (including images, fonts)
 - Subsequent navigation: <200KB (cached assets)
 
 ### Browser Support
 
 **Target Browsers:**
+
 - Chrome 90+ (last 2 versions)
 - Firefox 88+ (last 2 versions)
 - Safari 14+ (last 2 versions)
@@ -364,21 +370,26 @@ const buttonClasses = computed(() => ({
 }))
 
 const isValid = computed(() => {
-  return formData.value.name.length >= 2 &&
-         validateEmail(formData.value.email) &&
-         formData.value.message.length >= 10
+  return (
+    formData.value.name.length >= 2 &&
+    validateEmail(formData.value.email) &&
+    formData.value.message.length >= 10
+  )
 })
 
 // ============================================================================
 // WATCHERS
 // ============================================================================
-watch(() => props.disabled, (newVal) => {
-  if (newVal) {
-    isLoading.value = false
-  }
-})
+watch(
+  () => props.disabled,
+  newVal => {
+    if (newVal) {
+      isLoading.value = false
+    }
+  },
+)
 
-watch(errorMessage, (newMsg) => {
+watch(errorMessage, newMsg => {
   if (newMsg) {
     // Auto-clear error after 5 seconds
     setTimeout(() => {
@@ -448,11 +459,7 @@ onUnmounted(() => {
     <!-- ================================================================ -->
     <!-- TEMPLATE CONTENT -->
     <!-- ================================================================ -->
-    <button
-      :class="buttonClasses"
-      :disabled="disabled || isLoading"
-      @click="handleClick"
-    >
+    <button :class="buttonClasses" :disabled="disabled || isLoading" @click="handleClick">
       <span v-if="isLoading">Loading...</span>
       <slot v-else />
     </button>
@@ -477,6 +484,7 @@ onUnmounted(() => {
 ### Naming Conventions
 
 **Components:**
+
 ```
 ✅ GOOD (PascalCase, multi-word)
 HeroSection.vue
@@ -491,6 +499,7 @@ Button.vue
 ```
 
 **Composables:**
+
 ```
 ✅ GOOD (camelCase with 'use' prefix)
 useContactForm.ts
@@ -504,6 +513,7 @@ faq_state.ts
 ```
 
 **Utils:**
+
 ```
 ✅ GOOD (camelCase)
 validation.ts
@@ -516,6 +526,7 @@ api_client.ts
 ```
 
 **Types/Interfaces:**
+
 ```
 ✅ GOOD (PascalCase)
 ContactFormData
@@ -528,6 +539,7 @@ IApiResponse (don't use 'I' prefix)
 ```
 
 **Constants:**
+
 ```
 ✅ GOOD (SCREAMING_SNAKE_CASE)
 const MAX_FILE_SIZE = 5242880
@@ -546,9 +558,9 @@ const apibaseurl = '...'
 <script setup lang="ts">
 // ✅ GOOD - Explicit types with defaults
 interface Props {
-  title: string              // Required
-  variant?: 'primary' | 'secondary'  // Optional with union type
-  maxLength?: number         // Optional number
+  title: string // Required
+  variant?: 'primary' | 'secondary' // Optional with union type
+  maxLength?: number // Optional number
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -572,7 +584,7 @@ const props = defineProps({
 const emit = defineEmits<{
   click: [id: string]
   submit: [data: FormData]
-  update: []  // No payload
+  update: [] // No payload
 }>()
 
 // Usage
@@ -625,6 +637,7 @@ const emit = defineEmits(['click', 'submit'])
 **No Pinia/Vuex needed for MVP.** Use Vue 3 Composables for state management.
 
 **Why composables over state libraries:**
+
 - **Simplicity:** No boilerplate, just functions
 - **Type safety:** Full TypeScript inference
 - **Flexibility:** Compose multiple composables easily
@@ -674,9 +687,11 @@ export function useContactForm() {
 
   // Computed
   const isValid = computed(() => {
-    return data.value.name.length >= 2 &&
-           isValidEmail(data.value.email) &&
-           data.value.message.length >= 10
+    return (
+      data.value.name.length >= 2 &&
+      isValidEmail(data.value.email) &&
+      data.value.message.length >= 10
+    )
   })
 
   // Validation methods
@@ -812,19 +827,11 @@ async function handleSubmit() {
 <template>
   <form @submit.prevent="handleSubmit">
     <div>
-      <input
-        v-model="data.name"
-        type="text"
-        placeholder="Nama"
-        @blur="validateName"
-      />
+      <input v-model="data.name" type="text" placeholder="Nama" @blur="validateName" />
       <span v-if="errors.name" class="text-red-500">{{ errors.name }}</span>
     </div>
 
-    <button
-      type="submit"
-      :disabled="!isValid || isSubmitting"
-    >
+    <button type="submit" :disabled="!isValid || isSubmitting">
       {{ isSubmitting ? 'Mengirim...' : 'Kirim Pesan' }}
     </button>
 
@@ -912,6 +919,7 @@ export function useFaqState() {
 Nuxt 3's built-in `$fetch` is used for all HTTP requests (server and client).
 
 **Why $fetch:**
+
 - **Universal:** Works on server and client
 - **Auto-retry:** Built-in retry logic
 - **Type-safe:** Full TypeScript support
@@ -939,7 +947,7 @@ const contactSchema = z.object({
   _timestamp: z.number().optional(),
 })
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async event => {
   const config = useRuntimeConfig()
 
   // ========================================================================
@@ -1067,10 +1075,7 @@ const rateLimitCache = new LRUCache<string, RateLimitEntry>({
   ttl: 1000 * 60 * 60, // 1 hour
 })
 
-export function checkRateLimit(
-  identifier: string,
-  config: RateLimitConfig
-): RateLimitResult {
+export function checkRateLimit(identifier: string, config: RateLimitConfig): RateLimitResult {
   const now = Date.now()
   const entry = rateLimitCache.get(identifier)
 
@@ -1112,7 +1117,7 @@ export function checkRateLimit(
 export async function checkRateLimitRedis(
   redis: any,
   identifier: string,
-  config: RateLimitConfig
+  config: RateLimitConfig,
 ): Promise<RateLimitResult> {
   const key = `rate-limit:${identifier}`
   const now = Date.now()
@@ -1228,7 +1233,7 @@ export async function verifyRecaptcha(token: string): Promise<RecaptchaResponse>
         secret: config.recaptchaSecretKey,
         response: token,
       }),
-    }
+    },
   )
 
   return response
@@ -1240,7 +1245,7 @@ export async function verifyRecaptcha(token: string): Promise<RecaptchaResponse>
 **File: `server/middleware/security-headers.ts`**
 
 ```typescript
-export default defineEventHandler((event) => {
+export default defineEventHandler(event => {
   const headers = {
     // Content Security Policy
     'Content-Security-Policy': [
@@ -1250,8 +1255,8 @@ export default defineEventHandler((event) => {
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: https: blob:",
       "connect-src 'self' https://www.google-analytics.com",
-      "frame-src https://www.google.com",
-      "upgrade-insecure-requests",
+      'frame-src https://www.google.com',
+      'upgrade-insecure-requests',
     ].join('; '),
 
     // Prevent clickjacking
@@ -1304,7 +1309,7 @@ export async function executeWithCircuitBreaker<T>(
   config: CircuitBreakerConfig = {
     failureThreshold: 5,
     resetTimeout: 60000, // 1 minute
-  }
+  },
 ): Promise<T> {
   let state = circuits.get(key)
 
@@ -1451,6 +1456,7 @@ pages/
 ```
 
 **Rationale:**
+
 - Target audience is Indonesian
 - Aligns with brand messaging ("Makin Mudah")
 - Better for SEO in Indonesian market
@@ -1464,7 +1470,8 @@ pages/
 <script setup lang="ts">
 useSeoMeta({
   title: 'Makin Mudah - Solusi IT Tanpa Ribet',
-  description: 'Platform IT untuk UMKM dan pelajar Indonesia. Aplikasi bisnis, konsultasi, dan mentoring dengan harga terjangkau.',
+  description:
+    'Platform IT untuk UMKM dan pelajar Indonesia. Aplikasi bisnis, konsultasi, dan mentoring dengan harga terjangkau.',
   ogTitle: 'Makin Mudah - Solusi IT Tanpa Ribet',
   ogDescription: 'Platform IT untuk UMKM dan pelajar Indonesia',
   ogImage: '/og-image.jpg',
@@ -1493,7 +1500,8 @@ definePageMeta({
 <script setup lang="ts">
 useSeoMeta({
   title: 'Aplikasi Bisnis - Makin Mudah',
-  description: 'Aplikasi bisnis berbasis web untuk UMKM Indonesia. POS, inventori, dan lebih banyak lagi dengan harga terjangkau.',
+  description:
+    'Aplikasi bisnis berbasis web untuk UMKM Indonesia. POS, inventori, dan lebih banyak lagi dengan harga terjangkau.',
   ogTitle: 'Aplikasi Bisnis - Makin Mudah',
 })
 </script>
@@ -1531,9 +1539,7 @@ function isActive(path: string): boolean {
     <nav class="container mx-auto px-4 py-4">
       <div class="flex items-center justify-between">
         <!-- Logo -->
-        <NuxtLink to="/" class="text-2xl font-bold text-teal-500">
-          Makin Mudah
-        </NuxtLink>
+        <NuxtLink to="/" class="text-2xl font-bold text-teal-500"> Makin Mudah </NuxtLink>
 
         <!-- Navigation -->
         <ul class="hidden md:flex space-x-6">
@@ -1684,37 +1690,34 @@ export default <Config>{
         '128': '32rem',
       },
       borderRadius: {
-        'card': '0.75rem',
+        card: '0.75rem',
       },
       boxShadow: {
-        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        card: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
         'card-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
       },
       animation: {
-        'typing': 'typing 3s steps(40, end)',
+        typing: 'typing 3s steps(40, end)',
         'fade-in': 'fadeIn 0.3s ease-in-out',
         'slide-up': 'slideUp 0.4s ease-out',
       },
       keyframes: {
         typing: {
-          'from': { width: '0' },
-          'to': { width: '100%' },
+          from: { width: '0' },
+          to: { width: '100%' },
         },
         fadeIn: {
-          'from': { opacity: '0' },
-          'to': { opacity: '1' },
+          from: { opacity: '0' },
+          to: { opacity: '1' },
         },
         slideUp: {
-          'from': { transform: 'translateY(20px)', opacity: '0' },
-          'to': { transform: 'translateY(0)', opacity: '1' },
+          from: { transform: 'translateY(20px)', opacity: '0' },
+          to: { transform: 'translateY(0)', opacity: '1' },
         },
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 }
 ```
 
@@ -1731,10 +1734,10 @@ export default <Config>{
   /* ========================================================================
      COLORS
      ======================================================================== */
-  --color-teal-primary: #14B8A6;
+  --color-teal-primary: #14b8a6;
   --color-teal-dark: #0d9488;
-  --color-navy-primary: #1E3A8A;
-  --color-orange-primary: #F59E0B;
+  --color-navy-primary: #1e3a8a;
+  --color-orange-primary: #f59e0b;
 
   /* Semantic colors */
   --color-text-primary: #1f2937;
@@ -1809,7 +1812,12 @@ export default <Config>{
     font-family: var(--font-sans);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold text-navy-900;
   }
 
@@ -1949,11 +1957,14 @@ export default <Config>{
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid var(--color-teal-primary);
-  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation:
+    typing 3s steps(40, end),
+    blink-caret 0.75s step-end infinite;
 }
 
 @keyframes blink-caret {
-  from, to {
+  from,
+  to {
     border-color: transparent;
   }
   50% {
@@ -2058,9 +2069,7 @@ xl:  1280px  // Desktops
 
 ```vue
 <template>
-  <div class="text-base sm:text-lg md:text-xl lg:text-2xl">
-    Responsive text sizing
-  </div>
+  <div class="text-base sm:text-lg md:text-xl lg:text-2xl">Responsive text sizing</div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <!-- 1 column mobile, 2 tablet, 3 desktop -->
@@ -2092,13 +2101,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
-      exclude: [
-        'node_modules/',
-        'tests/',
-        '**/*.config.{js,ts}',
-        '.nuxt/',
-        'dist/',
-      ],
+      exclude: ['node_modules/', 'tests/', '**/*.config.{js,ts}', '.nuxt/', 'dist/'],
       thresholds: {
         lines: 80,
         functions: 80,
@@ -2136,7 +2139,9 @@ global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
-  takeRecords() { return [] }
+  takeRecords() {
+    return []
+  }
   unobserve() {}
 }
 
@@ -2170,7 +2175,7 @@ describe('HeroSection', () => {
   describe('Rendering', () => {
     it('renders hero headline correctly', () => {
       const { getByText } = render(HeroSection)
-      expect(getByText(/Hidup Makin Mudah dengan Makin Mudah/i)).toBeInTheDocument()
+      expect(getByText(/Hidup makin mudah dengan Makin Mudah/i)).toBeInTheDocument()
     })
 
     it('displays both CTA buttons', () => {
@@ -2200,7 +2205,7 @@ describe('HeroSection', () => {
       await wrapper.find('[data-testid="cta-intip"]').trigger('click')
       expect(mockTrack).toHaveBeenCalledWith('cta_click', {
         type: 'business',
-        location: 'hero'
+        location: 'hero',
       })
     })
 
@@ -2251,11 +2256,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: [
-    ['html'],
-    ['json', { outputFile: 'test-results/results.json' }],
-    ['list'],
-  ],
+  reporter: [['html'], ['json', { outputFile: 'test-results/results.json' }], ['list']],
   use: {
     baseURL: process.env.BASE_URL || 'http://localhost:3000',
     trace: 'on-first-retry',
@@ -2281,10 +2282,7 @@ export default defineConfig({
         },
         // 3G Fast network throttling
         launchOptions: {
-          args: [
-            '--disable-dev-shm-usage',
-            '--no-sandbox',
-          ],
+          args: ['--disable-dev-shm-usage', '--no-sandbox'],
         },
       },
     },
@@ -2641,7 +2639,7 @@ export default defineNuxtConfig({
 **File: `server/plugins/validate-config.ts`**
 
 ```typescript
-export default defineNitroPlugin((nitroApp) => {
+export default defineNitroPlugin(nitroApp => {
   const config = useRuntimeConfig()
 
   // Required secrets validation
@@ -2781,15 +2779,21 @@ module.exports = {
     'vue/require-default-prop': 'error',
     'vue/require-prop-types': 'error',
     'vue/component-name-in-template-casing': ['error', 'PascalCase'],
-    'vue/block-order': ['error', {
-      order: ['script', 'template', 'style'],
-    }],
+    'vue/block-order': [
+      'error',
+      {
+        order: ['script', 'template', 'style'],
+      },
+    ],
 
     // TypeScript rules
-    '@typescript-eslint/no-unused-vars': ['error', {
-      argsIgnorePattern: '^_',
-      varsIgnorePattern: '^_',
-    }],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+      },
+    ],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
 
@@ -2800,18 +2804,14 @@ module.exports = {
     'no-var': 'error',
 
     // Import organization
-    'import/order': ['error', {
-      groups: [
-        'builtin',
-        'external',
-        'internal',
-        'parent',
-        'sibling',
-        'index',
-      ],
-      'newlines-between': 'always',
-      alphabetize: { order: 'asc', caseInsensitive: true },
-    }],
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+        'newlines-between': 'always',
+        alphabetize: { order: 'asc', caseInsensitive: true },
+      },
+    ],
   },
 }
 ```
@@ -2888,16 +2888,9 @@ chore(deps): upgrade nuxt to 3.13.1
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{css,scss}": [
-      "prettier --write"
-    ],
-    "*.md": [
-      "prettier --write"
-    ]
+    "*.{js,ts,vue}": ["eslint --fix", "prettier --write"],
+    "*.{css,scss}": ["prettier --write"],
+    "*.md": ["prettier --write"]
   }
 }
 ```
@@ -2908,9 +2901,11 @@ chore(deps): upgrade nuxt to 3.13.1
 
 ```markdown
 ## Description
+
 <!-- Brief description of what this PR does -->
 
 ## Type of Change
+
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
@@ -2918,16 +2913,20 @@ chore(deps): upgrade nuxt to 3.13.1
 - [ ] Documentation update
 
 ## Related Story/Issue
+
 <!-- Link to story file or issue -->
+
 Story: [1.1 Project Setup](../docs/stories/epic-1-story-1.1-project-setup.md)
 Issue: #42
 
 ## Changes Made
+
 - Added hero section component with typing animation
 - Implemented dual CTAs with analytics tracking
 - Added unit tests for HeroSection component
 
 ## Testing Checklist
+
 - [ ] Unit tests pass (`npm run test:unit`)
 - [ ] E2E tests pass (`npm run test:e2e`)
 - [ ] Tested on mobile (Chrome DevTools)
@@ -2936,18 +2935,22 @@ Issue: #42
 - [ ] No console errors/warnings
 
 ## Accessibility Notes
+
 - [ ] Proper heading hierarchy (h1, h2, etc.)
 - [ ] ARIA labels where needed
 - [ ] Keyboard navigation works
 - [ ] Focus indicators visible
 
 ## Bundle Size Impact
+
 <!-- Check bundle size change with `npm run build` -->
+
 - JavaScript: +5KB gzipped
 - CSS: +2KB gzipped
 - Within budget: ✅ Yes / ❌ No
 
 ## Checklist
+
 - [ ] Code follows project style guidelines
 - [ ] Self-reviewed code before requesting review
 - [ ] Added/updated tests for changes
@@ -3115,6 +3118,7 @@ For story refinement, consult Bob (Scrum Master).
 ---
 
 **Document Metadata:**
+
 - **Total Sections:** 11
 - **Technology Decisions:** 25+
 - **Code Examples:** 50+

@@ -13,6 +13,7 @@
 **Session Goals:** Wide-ranging ideation to create a Nuxt-based, SEO-optimized landing page that is simple yet information-rich and persuasive. Target audiences include small business owners with no IT knowledge and students seeking IT learning/mentoring.
 
 **Techniques Used:**
+
 - Role Playing (30 minutes)
 - Journey Mapping (45 minutes)
 - SCAMPER Method (35 minutes)
@@ -20,6 +21,7 @@
 **Total Ideas Generated:** 40+ concepts across page structure, messaging, features, and enhancements
 
 ### Key Themes Identified:
+
 - Dual-audience approach requiring clear pathways for business owners vs students
 - Emphasis on simplicity, affordability, and accessibility (no installation, web-based)
 - Trust-building through transparent pricing and mentorship availability
@@ -41,7 +43,7 @@
 1. Core need: Easy to use, no installation, accessible anywhere (web-based/SaaS)
 2. Primary fear: Getting locked into expensive contracts
 3. Value messaging: Affordable solutions, simple for non-experts
-4. Hero headline: "Hidup Makin Mudah dengan Makin Mudah"
+4. Hero headline: "Hidup makin mudah dengan Makin Mudah"
 5. Pricing message: "Bayar Seperlumu, Bayar Semaumu"
 6. CTA language: "Intip Yuk" (casual, friendly, exploratory tone)
 7. Trust requirement: Proof that solutions are actually simple
@@ -57,12 +59,14 @@
 14. Proof needed: Evidence of affordable mentoring and community support
 
 #### Insights Discovered:
+
 - Two distinct user journeys require different messaging and CTAs
 - Both personas share fear of high costs but for different reasons (contracts vs budget)
 - Trust-building is critical but manifests differently (simplicity proof vs mentorship availability)
 - Language tone must be conversational and non-technical for both audiences
 
 #### Notable Connections:
+
 - Both personas need "accessible anywhere" solutions (alignment opportunity)
 - Unified messaging around affordability addresses both audiences' fears
 - Mentorship differentiates Makin Mudah from typical SaaS competitors
@@ -76,46 +80,28 @@
 #### Ideas Generated:
 
 **Section 1: Hero**
-1. Main headline: "Hidup Makin Mudah dengan Makin Mudah"
+
+1. Main headline: "Hidup makin mudah dengan Makin Mudah"
 2. Dual CTAs side-by-side: [Intip Yuk] [Mulai Dulu]
 3. Clear differentiation between business and student paths from the start
 
-**Section 2: Value Propositions (Visual, 3 Columns)**
-4. Icon 1: Price tag → "Bayar Seperlumu, Bayar Semaumu"
-5. Icon 2: Browser → "Tanpa Instalasi, Buka Dimana Saja"
-6. Icon 3: Hands helping → "Didampingi Mentor"
-7. Visual presentation for quick scanning and comprehension
+**Section 2: Value Propositions (Visual, 3 Columns)** 4. Icon 1: Price tag → "Bayar Seperlumu, Bayar Semaumu" 5. Icon 2: Browser → "Tanpa Instalasi, Buka Dimana Saja" 6. Icon 3: Hands helping → "Didampingi Mentor" 7. Visual presentation for quick scanning and comprehension
 
-**Section 3: Problem → Solution (Unified)**
-8. Problem 1: "IT terlalu ribet dan bikin pusing?"
-9. Solution 1: "Solusi kami dibuat sederhana, bahkan untuk yang gaptek sekalipun"
-10. Problem 2: "Takut terjebak biaya mahal?"
-11. Solution 2: "Bayar Seperlumu, Bayar Semaumu" (reinforcement)
-12. CTA: [Intip Solusinya]
-13. Purpose: Address universal pain points before diving into specifics
+**Section 3: Problem → Solution (Unified)** 8. Problem 1: "IT terlalu ribet dan bikin pusing?" 9. Solution 1: "Solusi kami dibuat sederhana, bahkan untuk yang gaptek sekalipun" 10. Problem 2: "Takut terjebak biaya mahal?" 11. Solution 2: "Bayar Seperlumu, Bayar Semaumu" (reinforcement) 12. CTA: [Intip Solusinya] 13. Purpose: Address universal pain points before diving into specifics
 
-**Section 4: FAQ (Accordion Style)**
-14. FAQ 1: "Berapa sih biayanya?"
-15. FAQ 2: "Butuh komputer khusus gak?"
-16. FAQ 3: "Gimana cara mulainya?"
-17. FAQ 4: "Kalau ada masalah, bisa tanya siapa?"
-18. FAQ 5: "Apa aja yang didapat?"
-19. FAQ 6: "Harus komitmen berapa lama?"
-20. FAQ 7: "Bisa coba dulu gak?"
-21. Accordion format to keep page clean while providing comprehensive information
+**Section 4: FAQ (Accordion Style)** 14. FAQ 1: "Berapa sih biayanya?" 15. FAQ 2: "Butuh komputer khusus gak?" 16. FAQ 3: "Gimana cara mulainya?" 17. FAQ 4: "Kalau ada masalah, bisa tanya siapa?" 18. FAQ 5: "Apa aja yang didapat?" 19. FAQ 6: "Harus komitmen berapa lama?" 20. FAQ 7: "Bisa coba dulu gak?" 21. Accordion format to keep page clean while providing comprehensive information
 
-**Section 5: Final CTA + Footer**
-22. Closing headline: "Siap untuk hidup yang makin mudah?"
-23. Single unified CTA: [Intip Solusinya]
-24. Footer: Copyright (simple for initial launch)
+**Section 5: Final CTA + Footer** 22. Closing headline: "Siap untuk hidup yang makin mudah?" 23. Single unified CTA: [Intip Solusinya] 24. Footer: Copyright (simple for initial launch)
 
 #### Insights Discovered:
+
 - Clear progression from attention → value → problem/solution → objections → conversion
 - Unified problem/solution section creates broader appeal than separate sections
 - FAQ placement before final CTA removes hesitation at critical moment
 - Consistent "Intip" language family maintains brand voice
 
 #### Notable Connections:
+
 - Hero dual CTAs segment audiences early, but middle sections unify them
 - Value props address both personas' needs simultaneously
 - Final single CTA brings audiences back together after understanding benefits
@@ -128,50 +114,29 @@
 
 #### Ideas Generated:
 
-**S - Substitute:**
-25. Smart floating CTA button (bottom-right corner, always visible)
-26. Default state: [Intip Solusinya]
-27. Adapts to [Intip Yuk] when scrolling past business content
-28. Adapts to [Mulai Dulu] when scrolling past student/mentoring content
-29. Replaces multiple static CTAs with one intelligent element
+**S - Substitute:** 25. Smart floating CTA button (bottom-right corner, always visible) 26. Default state: [Intip Solusinya] 27. Adapts to [Intip Yuk] when scrolling past business content 28. Adapts to [Mulai Dulu] when scrolling past student/mentoring content 29. Replaces multiple static CTAs with one intelligent element
 
-**C - Combine:**
-30. Enhanced Section 3: Problem/Solution + Visual demos
-31. Problem 1 + Short GIF showing ease of use
-32. Problem 2 + Visual of flexible payment options
-33. Stacked layout: Problem → Solution text → Demo visual
-34. Makes solutions tangible with proof, not just claims
+**C - Combine:** 30. Enhanced Section 3: Problem/Solution + Visual demos 31. Problem 1 + Short GIF showing ease of use 32. Problem 2 + Visual of flexible payment options 33. Stacked layout: Problem → Solution text → Demo visual 34. Makes solutions tangible with proof, not just claims
 
-**A - Adapt:**
-35. Netflix-style plan cards on catalogue page (post-CTA destination)
-36. Section 1: Business Applications cards
-37. Section 2: Mentoring Services cards
-38. Card content: Title, key features, pricing, CTA to learn more
+**A - Adapt:** 35. Netflix-style plan cards on catalogue page (post-CTA destination) 36. Section 1: Business Applications cards 37. Section 2: Mentoring Services cards 38. Card content: Title, key features, pricing, CTA to learn more
 
-**M - Modify:**
-39. Hero headline with responsive sizing (adapts to screen size)
-40. Emphasized words: "MAKIN MUDAH" brand name stands out
-41. Typing animation effect on page load for dynamic first impression
+**M - Modify:** 39. Hero headline with responsive sizing (adapts to screen size) 40. Emphasized words: "MAKIN MUDAH" brand name stands out 41. Typing animation effect on page load for dynamic first impression
 
-**P - Put to Another Use:**
-42. Multi-purpose floating button: CTA + announcements
-43. Badge/notification dot when announcement available
-44. Dynamic announcements: "Aplikasi Baru Tersedia" (business) or "Mentor Slot Terbuka" (students)
-45. Click/hover badge to see announcement details
+**P - Put to Another Use:** 42. Multi-purpose floating button: CTA + announcements 43. Badge/notification dot when announcement available 44. Dynamic announcements: "Aplikasi Baru Tersedia" (business) or "Mentor Slot Terbuka" (students) 45. Click/hover badge to see announcement details
 
-**E - Eliminate:**
-46. Decision: No elimination needed - all elements serve purpose
+**E - Eliminate:** 46. Decision: No elimination needed - all elements serve purpose
 
-**R - Reverse/Rearrange:**
-47. Decision: Keep current value props order (Pricing → No Installation → Mentorship)
+**R - Reverse/Rearrange:** 47. Decision: Keep current value props order (Pricing → No Installation → Mentorship)
 
 #### Insights Discovered:
+
 - Technology can make UX more personalized without overwhelming users
 - Visual proof (GIFs, payment visuals) significantly strengthens messaging
 - Familiar patterns (Netflix cards) reduce cognitive load
 - Small animations add polish without sacrificing simplicity
 
 #### Notable Connections:
+
 - Smart floating CTA unifies the dual-audience approach intelligently
 - Visual demos in Section 3 connect to "show, don't tell" principle
 - Adapting proven patterns (Netflix) accelerates user understanding
@@ -181,7 +146,8 @@
 ## Idea Categorization
 
 ### Immediate Opportunities
-*Ideas ready to implement now*
+
+_Ideas ready to implement now_
 
 1. **Landing Page Structure & Content**
    - Description: Complete 5-section landing page with hero, value props, problem/solution, FAQ, and final CTA
@@ -204,7 +170,8 @@
    - Resources needed: Icon design/sourcing, CSS grid layout
 
 ### Future Innovations
-*Ideas requiring development/research*
+
+_Ideas requiring development/research_
 
 5. **Smart Floating CTA Button**
    - Description: Adaptive CTA that changes based on scroll position and content viewed
@@ -227,7 +194,8 @@
    - Timeline estimate: Depends on product/service inventory readiness
 
 ### Moonshots
-*Ambitious, transformative concepts*
+
+_Ambitious, transformative concepts_
 
 9. **AI-Powered Personalization Engine**
    - Description: Extend smart CTA concept to fully personalized landing page experiences based on behavior, referral source, and engagement patterns
@@ -264,6 +232,7 @@
 **Rationale:** Foundation for all other enhancements; provides immediate marketing presence; validates messaging with real users before investing in advanced features
 
 **Next steps:**
+
 1. Create Nuxt project with SEO optimization setup (vue-meta, sitemap, structured data)
 2. Design and implement 5 sections with responsive layouts
 3. Write and refine Indonesian copy for all sections
@@ -273,6 +242,7 @@
 7. Deploy to production
 
 **Resources needed:**
+
 - Nuxt developer (familiar with SEO best practices)
 - Indonesian copywriter
 - UI/UX designer for visual elements
@@ -285,6 +255,7 @@
 **Rationale:** High impact for credibility; differentiates from competitors who only use text; relatively simple to implement alongside core landing page
 
 **Next steps:**
+
 1. Design custom icons or select high-quality icon set
 2. Create three-column responsive grid layout
 3. Implement hover effects or subtle animations for engagement
@@ -292,6 +263,7 @@
 5. Ensure accessibility (alt text, keyboard navigation)
 
 **Resources needed:**
+
 - Icon designer or quality icon library (e.g., Heroicons, custom illustration)
 - CSS/animation developer
 - Accessibility audit
@@ -303,6 +275,7 @@
 **Rationale:** Removes conversion friction; SEO benefit (rich snippets); reusable content for other channels (chatbot, docs, support)
 
 **Next steps:**
+
 1. Write comprehensive answers to 7 FAQ questions
 2. Implement accessible accordion component (ARIA labels, keyboard support)
 3. Add structured data markup for FAQ rich snippets (schema.org)
@@ -310,6 +283,7 @@
 5. Plan quarterly review of FAQ based on actual customer questions
 
 **Resources needed:**
+
 - Content writer with product knowledge
 - Frontend developer for accordion component
 - SEO specialist for structured data implementation
@@ -358,6 +332,7 @@
 ### Next Session Planning
 
 **Suggested topics:**
+
 1. **Pricing Strategy Workshop** - Define "Bayar Seperlumu, Bayar Semaumu" concretely
 2. **Catalogue Structure Brainstorm** - Design the applications and services pages users land on after CTAs
 3. **Content Strategy Session** - Plan SEO-driven content (blog, guides, tutorials) to support landing page
@@ -366,6 +341,7 @@
 **Recommended timeframe:** Within 1-2 weeks (while landing page implementation begins)
 
 **Preparation needed:**
+
 - Gather competitive research on Indonesian IT services/education landing pages
 - Draft initial pricing model options to discuss
 - List all planned applications and mentoring services (even if incomplete)
@@ -373,4 +349,4 @@
 
 ---
 
-*Session facilitated using the BMAD-METHOD™ brainstorming framework*
+_Session facilitated using the BMAD-METHOD™ brainstorming framework_
