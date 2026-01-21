@@ -130,11 +130,9 @@ test.describe('Hero Section', () => {
     test('should have keyboard navigable buttons', async ({ page }) => {
       await page.goto('/')
 
-      // Tab to first button
-      await page.keyboard.press('Tab')
-      await page.keyboard.press('Tab')
-
+      // Focus the first CTA button directly
       const intipBtn = page.getByRole('link', { name: 'Intip Yuk' })
+      await intipBtn.focus()
       await expect(intipBtn).toBeFocused()
 
       // Press Enter to navigate

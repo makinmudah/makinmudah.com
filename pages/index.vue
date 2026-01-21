@@ -10,5 +10,6 @@ useSeoMeta({
   <div>
     <LandingHeroSection />
     <LandingValuePropositions />
+    <LandingProblemSolution />
   </div>
 </template>
