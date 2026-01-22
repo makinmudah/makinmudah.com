@@ -3,6 +3,7 @@ import { test, expect } from '@playwright/test'
 test.describe('FAQ Accordion Section', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/')
+    await page.waitForLoadState('networkidle')
   })
 
   test.describe('Visual Verification', () => {
@@ -115,8 +116,9 @@ test.describe('FAQ Accordion Section', () => {
       await expect(answer1).not.toBeVisible()
 
       // Question 2 should be visible
-      const answer2 = faqSection.locator('text=berbasis web')
+      const answer2 = faqSection.locator('#faq-answer-1')
       await expect(answer2).toBeVisible()
+      await expect(answer2).toContainText('berbasis web')
     })
 
     test('chevron icon rotates when expanding/collapsing', async ({ page }) => {
@@ -169,9 +171,11 @@ test.describe('FAQ Accordion Section', () => {
       await question1.click()
       await page.waitForTimeout(350)
 
-      await expect(faqSection.locator('text=Rp 99.000/bulan')).toBeVisible()
-      await expect(faqSection.locator('text=Untuk Aplikasi Bisnis')).toBeVisible()
-      await expect(faqSection.locator('text=Untuk Mentoring')).toBeVisible()
+      const answer1 = faqSection.locator('#faq-answer-0')
+      await expect(answer1).toBeVisible()
+      await expect(answer1).toContainText('Rp 99.000/bulan')
+      await expect(answer1).toContainText('Untuk Aplikasi Bisnis')
+      await expect(answer1).toContainText('Untuk Mentoring')
     })
 
     test('Answer content for Question 7 contains trial/demo information', async ({ page }) => {
@@ -297,8 +301,9 @@ test.describe('FAQ Accordion Section', () => {
       await question1.click()
       await page.waitForTimeout(350)
 
-      const answer = page.locator('text=Bayar Seperlumu')
+      const answer = faqSection.locator('#faq-answer-0')
       await expect(answer).toBeVisible()
+      await expect(answer).toContainText('Bayar Seperlumu')
     })
 
     test('tablet (768px): Proper spacing and readability', async ({ page }) => {
