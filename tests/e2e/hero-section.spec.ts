@@ -39,15 +39,15 @@ test.describe('Hero Section', () => {
     // Click "Intip Yuk" button
     const intipBtn = page.getByRole('link', { name: 'Intip Yuk' })
     await intipBtn.click()
-    await expect(page).toHaveURL('/katalog/aplikasi')
-    await expect(page.getByRole('heading', { name: 'Katalog Aplikasi' })).toBeVisible()
+    await expect(page).toHaveURL('/katalog')
+    await expect(page.getByRole('heading', { name: 'Katalog Makin Mudah' })).toBeVisible()
 
     // Go back and click "Mulai Dulu"
     await page.goto('/')
     const mulaiBtn = page.getByRole('link', { name: 'Mulai Dulu' })
     await mulaiBtn.click()
-    await expect(page).toHaveURL('/katalog/mentoring')
-    await expect(page.getByRole('heading', { name: 'Katalog Mentoring' })).toBeVisible()
+    await expect(page).toHaveURL('/katalog')
+    await expect(page.getByRole('heading', { name: 'Katalog Makin Mudah' })).toBeVisible()
   })
 
   test('should have proper hero section height', async ({ page }) => {
@@ -137,7 +137,7 @@ test.describe('Hero Section', () => {
 
       // Press Enter to navigate
       await page.keyboard.press('Enter')
-      await expect(page).toHaveURL('/katalog/aplikasi')
+      await expect(page).toHaveURL('/katalog')
     })
 
     test('should have visible focus indicators', async ({ page }) => {

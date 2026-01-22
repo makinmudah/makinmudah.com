@@ -92,7 +92,7 @@
       <!-- CTA Button -->
       <div class="text-center">
         <NuxtLink
-          to="/katalog/aplikasi"
+          to="/katalog"
           class="inline-block rounded-lg bg-teal-500 px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-teal-600 md:text-lg"
         >
           Intip Solusinya

@@ -72,18 +72,18 @@ describe('HeroSection', () => {
   })
 
   describe('Navigation', () => {
-    it('"Intip Yuk" button navigates to /katalog/aplikasi', () => {
+    it('"Intip Yuk" button navigates to /katalog', () => {
       const wrapper = createWrapper()
       const intipBtn = wrapper.find('[data-testid="cta-intip"]')
 
-      expect(intipBtn.attributes('href')).toBe('/katalog/aplikasi')
+      expect(intipBtn.attributes('href')).toBe('/katalog')
     })
 
-    it('"Mulai Dulu" button navigates to /katalog/mentoring', () => {
+    it('"Mulai Dulu" button navigates to /katalog', () => {
       const wrapper = createWrapper()
       const mulaiBtn = wrapper.find('[data-testid="cta-mulai"]')
 
-      expect(mulaiBtn.attributes('href')).toBe('/katalog/mentoring')
+      expect(mulaiBtn.attributes('href')).toBe('/katalog')
     })
   })
 

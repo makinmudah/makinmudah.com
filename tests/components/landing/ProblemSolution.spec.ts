@@ -39,7 +39,7 @@ describe('ProblemSolution', () => {
 
     it('renders CTA button', () => {
       const wrapper = createWrapper()
-      const ctaButton = wrapper.find('a[href="/katalog/aplikasi"]')
+      const ctaButton = wrapper.find('a[href="/katalog"]')
       expect(ctaButton.exists()).toBe(true)
     })
 
@@ -203,22 +203,22 @@ describe('ProblemSolution', () => {
   describe('CTA Button', () => {
     it('CTA button links to correct URL', () => {
       const wrapper = createWrapper()
-      const ctaButton = wrapper.find('a[href="/katalog/aplikasi"]')
+      const ctaButton = wrapper.find('a[href="/katalog"]')
 
       expect(ctaButton.exists()).toBe(true)
-      expect(ctaButton.attributes('href')).toBe('/katalog/aplikasi')
+      expect(ctaButton.attributes('href')).toBe('/katalog')
     })
 
     it('CTA button has correct text', () => {
       const wrapper = createWrapper()
-      const ctaButton = wrapper.find('a[href="/katalog/aplikasi"]')
+      const ctaButton = wrapper.find('a[href="/katalog"]')
 
       expect(ctaButton.text()).toBe('Intip Solusinya')
     })
 
     it('CTA button has correct styling classes', () => {
       const wrapper = createWrapper()
-      const ctaButton = wrapper.find('a[href="/katalog/aplikasi"]')
+      const ctaButton = wrapper.find('a[href="/katalog"]')
 
       expect(ctaButton.classes()).toContain('inline-block')
       expect(ctaButton.classes()).toContain('rounded-lg')
@@ -232,7 +232,7 @@ describe('ProblemSolution', () => {
 
     it('CTA button is centered', () => {
       const wrapper = createWrapper()
-      const ctaContainer = wrapper.find('a[href="/katalog/aplikasi"]').element.parentElement
+      const ctaContainer = wrapper.find('a[href="/katalog"]').element.parentElement
 
       expect(ctaContainer?.classList.contains('text-center')).toBe(true)
     })

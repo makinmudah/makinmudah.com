@@ -21,7 +21,7 @@
       <!-- Dual CTA Buttons -->
       <div class="flex flex-wrap items-center justify-center gap-4">
         <NuxtLink
-          to="/katalog/aplikasi"
+          to="/katalog"
           class="inline-block rounded-lg bg-teal-500 px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
           data-testid="cta-intip"
         >
@@ -29,7 +29,7 @@
         </NuxtLink>
 
         <NuxtLink
-          to="/katalog/mentoring"
+          to="/katalog"
           class="inline-block rounded-lg bg-orange-500 px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
           data-testid="cta-mulai"
         >

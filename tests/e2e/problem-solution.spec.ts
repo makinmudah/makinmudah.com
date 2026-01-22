@@ -56,7 +56,8 @@ test.describe('Problem and Solution Section', () => {
     })
 
     test('CTA button is visible', async ({ page }) => {
-      const ctaButton = page.locator('a:has-text("Intip Solusinya")')
+      const section = page.locator('section:has(h2:has-text("IT terlalu ribet"))')
+      const ctaButton = section.locator('a:has-text("Intip Solusinya")')
       await expect(ctaButton).toBeVisible()
     })
   })
@@ -166,17 +167,20 @@ test.describe('Problem and Solution Section', () => {
 
   test.describe('CTA Button', () => {
     test('CTA button has correct text', async ({ page }) => {
-      const ctaButton = page.locator('a:has-text("Intip Solusinya")')
+      const section = page.locator('section:has(h2:has-text("IT terlalu ribet"))')
+      const ctaButton = section.locator('a:has-text("Intip Solusinya")')
       await expect(ctaButton).toHaveText('Intip Solusinya')
     })
 
     test('CTA button has correct href', async ({ page }) => {
-      const ctaButton = page.locator('a:has-text("Intip Solusinya")')
-      await expect(ctaButton).toHaveAttribute('href', '/katalog/aplikasi')
+      const section = page.locator('section:has(h2:has-text("IT terlalu ribet"))')
+      const ctaButton = section.locator('a:has-text("Intip Solusinya")')
+      await expect(ctaButton).toHaveAttribute('href', '/katalog')
     })
 
     test('CTA button has teal background', async ({ page }) => {
-      const ctaButton = page.locator('a:has-text("Intip Solusinya")')
+      const section = page.locator('section:has(h2:has-text("IT terlalu ribet"))')
+      const ctaButton = section.locator('a:has-text("Intip Solusinya")')
       const bgColor = await ctaButton.evaluate(el => {
         return window.getComputedStyle(el).backgroundColor
       })
@@ -186,12 +190,13 @@ test.describe('Problem and Solution Section', () => {
     })
 
     test('CTA button is clickable', async ({ page }) => {
-      const ctaButton = page.locator('a:has-text("Intip Solusinya")')
+      const section = page.locator('section:has(h2:has-text("IT terlalu ribet"))')
+      const ctaButton = section.locator('a:has-text("Intip Solusinya")')
       await expect(ctaButton).toBeEnabled()
 
       // Verify it's an actual link (not disabled)
       const href = await ctaButton.getAttribute('href')
-      expect(href).toBe('/katalog/aplikasi')
+      expect(href).toBe('/katalog')
     })
   })
 
@@ -321,7 +326,8 @@ test.describe('Problem and Solution Section', () => {
     })
 
     test('CTA link is keyboard accessible', async ({ page }) => {
-      const ctaButton = page.locator('a:has-text("Intip Solusinya")')
+      const section = page.locator('section:has(h2:has-text("IT terlalu ribet"))')
+      const ctaButton = section.locator('a:has-text("Intip Solusinya")')
 
       // Focus the button using keyboard
       await ctaButton.focus()

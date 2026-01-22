@@ -12,5 +12,7 @@ useSeoMeta({
     <LandingValuePropositions />
     <LandingProblemSolution />
     <LandingFaqAccordion />
+    <LandingFinalCta />
+    <CommonAppFooter />
   </div>
 </template>
