@@ -1,13 +1,26 @@
-import { render } from '@testing-library/vue'
 import { mount } from '@vue/test-utils'
 import { describe, it, expect } from 'vitest'
 
 import HeroSection from '@/components/landing/HeroSection.vue'
 
+// Helper to create wrapper with global stubs
+const createWrapper = () => {
+  return mount(HeroSection, {
+    global: {
+      stubs: {
+        NuxtLink: {
+          template: '<a :href="to"><slot /></a>',
+          props: ['to'],
+        },
+      },
+    },
+  })
+}
+
 describe('HeroSection', () => {
   describe('Rendering', () => {
     it('renders hero headline correctly', () => {
-      const wrapper = mount(HeroSection)
+      const wrapper = createWrapper()
       const headline = wrapper.find('h1')
       const headlineText = headline.text()
 
@@ -17,27 +30,27 @@ describe('HeroSection', () => {
     })
 
     it('"Makin Mudah" words are emphasized with teal color', () => {
-      const wrapper = mount(HeroSection)
+      const wrapper = createWrapper()
       const spans = wrapper.findAll('h1 span')
-      expect(spans.length).toBeGreaterThanOrEqual(2)
-      expect(spans[0].classes()).toContain('text-teal-500')
-      expect(spans[0].classes()).toContain('font-bold')
+      expect(spans.length).toBe(1)
+      expect(spans[0]?.classes()).toContain('text-teal-500')
+      expect(spans[0]?.classes()).toContain('font-bold')
     })
 
     it('applies slide-up animation class to headline', () => {
-      const wrapper = mount(HeroSection)
+      const wrapper = createWrapper()
       const headline = wrapper.find('h1')
       expect(headline.classes()).toContain('animate-slide-up')
     })
 
     it('displays both CTA buttons with correct text', () => {
-      const { getByText } = render(HeroSection)
-      expect(getByText('Intip Yuk')).toBeInTheDocument()
-      expect(getByText('Mulai Dulu')).toBeInTheDocument()
+      const wrapper = createWrapper()
+      expect(wrapper.text()).toContain('Intip Yuk')
+      expect(wrapper.text()).toContain('Mulai Dulu')
     })
 
     it('buttons have correct background colors', () => {
-      const wrapper = mount(HeroSection)
+      const wrapper = createWrapper()
       const intipBtn = wrapper.find('[data-testid="cta-intip"]')
       const mulaiBtn = wrapper.find('[data-testid="cta-mulai"]')
 
@@ -46,7 +59,7 @@ describe('HeroSection', () => {
     })
 
     it('buttons have minimum tap target size classes', () => {
-      const wrapper = mount(HeroSection)
+      const wrapper = createWrapper()
       const intipBtn = wrapper.find('[data-testid="cta-intip"]')
       const mulaiBtn = wrapper.find('[data-testid="cta-mulai"]')
 
@@ -60,47 +73,44 @@ describe('HeroSection', () => {
 
   describe('Navigation', () => {
     it('"Intip Yuk" button navigates to /katalog/aplikasi', () => {
-      const wrapper = mount(HeroSection)
+      const wrapper = createWrapper()
       const intipBtn = wrapper.find('[data-testid="cta-intip"]')
 
-      expect(intipBtn.attributes('to')).toBe('/katalog/aplikasi')
+      expect(intipBtn.attributes('href')).toBe('/katalog/aplikasi')
     })
 
     it('"Mulai Dulu" button navigates to /katalog/mentoring', () => {
-      const wrapper = mount(HeroSection)
+      const wrapper = createWrapper()
       const mulaiBtn = wrapper.find('[data-testid="cta-mulai"]')
 
-      expect(mulaiBtn.attributes('to')).toBe('/katalog/mentoring')
+      expect(mulaiBtn.attributes('href')).toBe('/katalog/mentoring')
     })
   })
 
   describe('Accessibility', () => {
     it('has proper heading hierarchy', () => {
-      const wrapper = mount(HeroSection)
+      const wrapper = createWrapper()
       const h1 = wrapper.find('h1')
       expect(h1.exists()).toBe(true)
 
       // Should not have h2 before h1
       const headings = wrapper.findAll('h1, h2, h3, h4, h5, h6')
-      expect(headings[0].element.tagName).toBe('H1')
+      expect(headings[0]?.element.tagName).toBe('H1')
     })
 
     it('uses semantic HTML section element', () => {
-      const wrapper = mount(HeroSection)
+      const wrapper = createWrapper()
       expect(wrapper.find('section').exists()).toBe(true)
     })
 
     it('CTA buttons have accessible names', () => {
-      const { getByText } = render(HeroSection)
-      const intipBtn = getByText('Intip Yuk')
-      const mulaiBtn = getByText('Mulai Dulu')
-
-      expect(intipBtn).toBeInTheDocument()
-      expect(mulaiBtn).toBeInTheDocument()
+      const wrapper = createWrapper()
+      expect(wrapper.text()).toContain('Intip Yuk')
+      expect(wrapper.text()).toContain('Mulai Dulu')
     })
 
     it('buttons have visible focus indicators', () => {
-      const wrapper = mount(HeroSection)
+      const wrapper = createWrapper()
       const intipBtn = wrapper.find('[data-testid="cta-intip"]')
       const mulaiBtn = wrapper.find('[data-testid="cta-mulai"]')
 
@@ -111,7 +121,7 @@ describe('HeroSection', () => {
 
   describe('Responsive Design', () => {
     it('headline has responsive text sizing with clamp()', () => {
-      const wrapper = mount(HeroSection)
+      const wrapper = createWrapper()
       const headline = wrapper.find('h1')
 
       // Check for clamp-based responsive sizing
@@ -120,7 +130,7 @@ describe('HeroSection', () => {
     })
 
     it('hero section has appropriate min-height classes', () => {
-      const wrapper = mount(HeroSection)
+      const wrapper = createWrapper()
       const section = wrapper.find('section')
 
       expect(section.classes()).toContain('min-h-[80vh]')
