@@ -16,11 +16,7 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "vue"
-  ],
+  "eslint.validate": ["javascript", "typescript", "vue"],
   "typescript.tsdk": "node_modules/typescript/lib",
   "vue.inlayHints.parameterNames": false,
   "vue.inlayHints.parameterTypes": false,

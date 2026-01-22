@@ -8,7 +8,9 @@ test.describe('Final CTA and Footer', () => {
 
   test.describe('Final CTA Section - Visual Verification', () => {
     test('Final CTA section is visible on landing page', async ({ page }) => {
-      const ctaSection = page.locator('section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))')
+      const ctaSection = page.locator(
+        'section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))',
+      )
       await expect(ctaSection).toBeVisible()
     })
 
@@ -16,7 +18,9 @@ test.describe('Final CTA and Footer', () => {
       const faqSection = page.locator(
         'section:has(h2:has-text("Pertanyaan yang Sering Ditanyakan"))',
       )
-      const ctaSection = page.locator('section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))')
+      const ctaSection = page.locator(
+        'section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))',
+      )
 
       const faqBox = await faqSection.boundingBox()
       const ctaBox = await ctaSection.boundingBox()
@@ -32,7 +36,9 @@ test.describe('Final CTA and Footer', () => {
     })
 
     test('CTA button "Intip Solusinya" is visible', async ({ page }) => {
-      const ctaSection = page.locator('section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))')
+      const ctaSection = page.locator(
+        'section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))',
+      )
       const button = ctaSection.locator('a:has-text("Intip Solusinya")')
       await expect(button).toBeVisible()
     })
@@ -53,7 +59,9 @@ test.describe('Final CTA and Footer', () => {
 
   test.describe('Final CTA Section - Interaction', () => {
     test('clicking CTA button navigates to /katalog', async ({ page }) => {
-      const ctaSection = page.locator('section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))')
+      const ctaSection = page.locator(
+        'section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))',
+      )
       const button = ctaSection.locator('a:has-text("Intip Solusinya")')
 
       await button.click()
@@ -65,7 +73,9 @@ test.describe('Final CTA and Footer', () => {
 
   test.describe('Final CTA Section - Styling', () => {
     test('button has teal background color', async ({ page }) => {
-      const ctaSection = page.locator('section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))')
+      const ctaSection = page.locator(
+        'section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))',
+      )
       const button = ctaSection.locator('a:has-text("Intip Solusinya")')
 
       const bgColor = await button.evaluate(el => {
@@ -90,7 +100,9 @@ test.describe('Final CTA and Footer', () => {
 
   test.describe('Final CTA Section - Accessibility', () => {
     test('button is keyboard accessible (Tab to focus, Enter to navigate)', async ({ page }) => {
-      const ctaSection = page.locator('section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))')
+      const ctaSection = page.locator(
+        'section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))',
+      )
       const button = ctaSection.locator('a:has-text("Intip Solusinya")')
 
       // Focus the button
@@ -110,7 +122,9 @@ test.describe('Final CTA and Footer', () => {
     })
 
     test('button has visible focus indicator', async ({ page }) => {
-      const ctaSection = page.locator('section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))')
+      const ctaSection = page.locator(
+        'section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))',
+      )
       const button = ctaSection.locator('a:has-text("Intip Solusinya")')
 
       await button.focus()
@@ -149,7 +163,9 @@ test.describe('Final CTA and Footer', () => {
     })
 
     test('Footer appears below Final CTA section', async ({ page }) => {
-      const ctaSection = page.locator('section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))')
+      const ctaSection = page.locator(
+        'section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))',
+      )
       const footer = page.locator('footer')
 
       const ctaBox = await ctaSection.boundingBox()
@@ -196,7 +212,9 @@ test.describe('Final CTA and Footer', () => {
     test('mobile (375px): Button and text display correctly', async ({ page }) => {
       await page.setViewportSize({ width: 375, height: 667 })
 
-      const ctaSection = page.locator('section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))')
+      const ctaSection = page.locator(
+        'section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))',
+      )
       const headline = page.locator('h2:has-text("Siap untuk hidup yang makin mudah?")')
       const button = ctaSection.locator('a:has-text("Intip Solusinya")')
       const footer = page.locator('footer')
@@ -215,7 +233,9 @@ test.describe('Final CTA and Footer', () => {
     test('tablet (768px): Proper spacing maintained', async ({ page }) => {
       await page.setViewportSize({ width: 768, height: 1024 })
 
-      const ctaSection = page.locator('section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))')
+      const ctaSection = page.locator(
+        'section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))',
+      )
       const footer = page.locator('footer')
 
       await expect(ctaSection).toBeVisible()
@@ -225,7 +245,9 @@ test.describe('Final CTA and Footer', () => {
     test('desktop (1280px): Proper spacing and layout', async ({ page }) => {
       await page.setViewportSize({ width: 1280, height: 720 })
 
-      const ctaSection = page.locator('section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))')
+      const ctaSection = page.locator(
+        'section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))',
+      )
       const headline = page.locator('h2:has-text("Siap untuk hidup yang makin mudah?")')
       const button = ctaSection.locator('a:has-text("Intip Solusinya")')
       const footer = page.locator('footer')
@@ -257,7 +279,9 @@ test.describe('Final CTA and Footer', () => {
     })
 
     test('CTA button uses casual Indonesian wording', async ({ page }) => {
-      const ctaSection = page.locator('section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))')
+      const ctaSection = page.locator(
+        'section:has(h2:has-text("Siap untuk hidup yang makin mudah?"))',
+      )
       const button = ctaSection.locator('a:has-text("Intip Solusinya")')
       await expect(button).toBeVisible()
 

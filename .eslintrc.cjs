@@ -13,7 +13,7 @@ module.exports = {
   rules: {
     'vue/multi-word-component-names': [
       'error',
-      { ignores: ['index', 'default', 'error', 'aplikasi', 'mentoring'] },
+      { ignores: ['index', 'default', 'error', 'katalog', 'aplikasi', 'mentoring'] },
     ],
     'vue/no-v-html': 'warn',
     'vue/require-default-prop': 'error',

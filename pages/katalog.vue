@@ -151,13 +151,8 @@ const mentoringItems = computed(() =>
     <header class="bg-white shadow-sm">
       <div class="container mx-auto px-4 py-6">
         <div class="flex items-center justify-between">
-          <NuxtLink to="/" class="text-2xl font-bold text-navy-900">
-            Makin Mudah
-          </NuxtLink>
-          <NuxtLink
-            to="/"
-            class="text-sm text-gray-600 transition-colors hover:text-teal-600"
-          >
+          <NuxtLink to="/" class="text-2xl font-bold text-navy-900"> Makin Mudah </NuxtLink>
+          <NuxtLink to="/" class="text-sm text-gray-600 transition-colors hover:text-teal-600">
             ← Kembali ke Beranda
           </NuxtLink>
         </div>
@@ -167,12 +162,10 @@ const mentoringItems = computed(() =>
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-teal-50 to-white py-12 md:py-16">
       <div class="container mx-auto px-4 text-center">
-        <h1 class="mb-4 text-4xl font-bold text-navy-900 md:text-5xl">
-          Katalog Makin Mudah
-        </h1>
+        <h1 class="mb-4 text-4xl font-bold text-navy-900 md:text-5xl">Katalog Makin Mudah</h1>
         <p class="mx-auto max-w-2xl text-lg text-gray-700 md:text-xl">
-          Pilih solusi yang cocok buat kamu. Aplikasi bisnis untuk UMKM atau program mentoring
-          untuk upgrade skill IT.
+          Pilih solusi yang cocok buat kamu. Aplikasi bisnis untuk UMKM atau program mentoring untuk
+          upgrade skill IT.
         </p>
       </div>
     </section>
@@ -282,9 +275,7 @@ const mentoringItems = computed(() =>
     <!-- CTA Section -->
     <section class="bg-gradient-to-r from-gray-50 to-white py-12 md:py-16">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="mb-4 text-3xl font-bold text-navy-900 md:text-4xl">
-          Belum nemu yang cocok?
-        </h2>
+        <h2 class="mb-4 text-3xl font-bold text-navy-900 md:text-4xl">Belum nemu yang cocok?</h2>
         <p class="mb-8 text-lg text-gray-700">
           Semua produk dan program di atas sedang dalam tahap pengembangan. Kami akan segera
           meluncurkannya!
