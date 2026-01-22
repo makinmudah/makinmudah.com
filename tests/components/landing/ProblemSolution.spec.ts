@@ -12,6 +12,11 @@ const createWrapper = () => {
           template: '<a :href="to"><slot /></a>',
           props: ['to'],
         },
+        NuxtImg: {
+          template:
+            '<img :src="src" :alt="alt" :width="width" :height="height" :loading="loading" />',
+          props: ['src', 'alt', 'width', 'height', 'loading', 'format', 'sizes'],
+        },
       },
     },
   })

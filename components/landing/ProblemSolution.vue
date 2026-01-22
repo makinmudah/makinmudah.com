@@ -41,12 +41,14 @@
 
         <!-- Visual Demo 1 -->
         <div class="flex justify-center">
-          <img
+          <NuxtImg
             src="/images/simple-ui-demo.png"
             alt="Demo of simple and intuitive user interface"
             width="600"
             height="400"
             loading="lazy"
+            format="webp"
+            sizes="sm:100vw md:80vw lg:600px"
             class="h-auto max-w-full rounded-lg shadow-md"
           />
         </div>
@@ -78,12 +80,14 @@
 
         <!-- Visual Demo 2 -->
         <div class="flex justify-center">
-          <img
+          <NuxtImg
             src="/images/pricing-flexibility.png"
             alt="Illustration showing flexible pricing options and payment models"
             width="600"
             height="400"
             loading="lazy"
+            format="webp"
+            sizes="sm:100vw md:80vw lg:600px"
             class="h-auto max-w-full rounded-lg shadow-md"
           />
         </div>
