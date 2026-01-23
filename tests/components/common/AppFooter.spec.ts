@@ -61,11 +61,11 @@ describe('AppFooter', () => {
       expect(copyright.classes()).toContain('text-center')
     })
 
-    it('footer has minimal padding (py-6)', () => {
+    it('footer has comfortable padding (py-8)', () => {
       const wrapper = mount(AppFooter)
       const footer = wrapper.find('footer')
 
-      expect(footer.classes()).toContain('py-6')
+      expect(footer.classes()).toContain('py-8')
     })
   })
 

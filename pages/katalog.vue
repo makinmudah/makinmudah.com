@@ -4,17 +4,74 @@ import { ref, computed, onMounted } from 'vue'
 // ============================================================================
 // SEO META
 // ============================================================================
+// ============================================================================
+// SEO META TAGS
+// ============================================================================
+const config = useRuntimeConfig()
+const route = useRoute()
+
 useSeoMeta({
-  title: 'Aplikasi Bisnis & Program Mentoring IT - Makin Mudah',
+  // Primary Meta Tags
+  title: 'Katalog Aplikasi Bisnis & Mentoring IT - Makin Mudah',
   description:
-    'Jelajahi aplikasi bisnis untuk UMKM dan program mentoring IT terjangkau. Belajar dari mentor berpengalaman atau digitalisasi bisnis Anda dengan solusi sederhana.',
+    'Jelajahi aplikasi bisnis untuk UMKM dan program mentoring IT terjangkau. Sistem kasir, inventori, CRM, dan belajar web development dengan mentor berpengalaman.',
+
+  // Keywords for search engines
   keywords:
-    'aplikasi bisnis, UMKM, mentoring IT Indonesia, belajar web development, bootcamp programming murah, solusi IT sederhana',
-  ogTitle: 'Aplikasi Bisnis & Program Mentoring IT - Makin Mudah',
+    'aplikasi bisnis UMKM, mentoring IT Indonesia, belajar web development, bootcamp programming murah, sistem kasir online, aplikasi inventori, konsultan IT',
+
+  // Open Graph / Facebook
+  ogTitle: 'Katalog Aplikasi Bisnis & Mentoring IT - Makin Mudah',
   ogDescription:
-    'Solusi IT terjangkau untuk bisnis dan belajar programming dengan mentor berpengalaman',
+    'Solusi IT terjangkau: aplikasi kasir, inventori, CRM untuk UMKM. Program mentoring web development dengan mentor berpengalaman.',
+  ogImage: `${config.public.siteUrl}/images/og-image.jpg`,
+  ogUrl: `${config.public.siteUrl}${route.path}`,
   ogType: 'website',
-  ogUrl: 'https://makinmudah.com/katalog',
+  ogLocale: 'id_ID',
+
+  // Twitter Card
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Katalog Aplikasi Bisnis & Mentoring IT',
+  twitterDescription:
+    'Aplikasi bisnis UMKM dan program mentoring IT terjangkau. Bayar seperlumu, didampingi mentor.',
+  twitterImage: `${config.public.siteUrl}/images/og-image.jpg`,
+
+  // Canonical URL
+  canonical: `${config.public.siteUrl}${route.path}`,
+})
+
+// ============================================================================
+// STRUCTURED DATA (Schema.org)
+// ============================================================================
+
+// Breadcrumb Structured Data
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: config.public.siteUrl,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Katalog',
+      item: `${config.public.siteUrl}/katalog`,
+    },
+  ],
+}
+
+// Inject structured data into head
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify(breadcrumbSchema),
+    },
+  ],
 })
 
 // ============================================================================
@@ -181,16 +238,12 @@ onMounted(() => {
 <template>
   <div class="min-h-screen bg-gray-50">
     <!-- Header -->
-    <header class="bg-white shadow-sm">
-      <div class="container mx-auto px-4 py-6">
-        <div class="flex items-center justify-between">
-          <NuxtLink to="/" class="text-2xl font-bold text-navy-900"> Makin Mudah </NuxtLink>
-          <NuxtLink to="/" class="text-sm text-gray-600 transition-colors hover:text-teal-600">
-            ← Kembali ke Beranda
-          </NuxtLink>
-        </div>
-      </div>
-    </header>
+    <CommonAppHeader />
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4">
+      <CommonAppBreadcrumb />
+    </div>
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-teal-50 to-white py-12 md:py-16">

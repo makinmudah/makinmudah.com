@@ -71,3 +71,16 @@ router.afterEach(to => {
     <NuxtPage />
   </div>
 </template>
+
+<style>
+/* Page transition animations */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 200ms ease-in-out;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+</style>
