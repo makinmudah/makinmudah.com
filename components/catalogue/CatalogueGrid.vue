@@ -22,7 +22,7 @@ interface CatalogueGridProps {
 // ============================================================================
 // PROPS
 // ============================================================================
-const props = defineProps<CatalogueGridProps>()
+const { items } = defineProps<CatalogueGridProps>()
 </script>
 
 <template>
