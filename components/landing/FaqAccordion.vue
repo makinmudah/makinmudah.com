@@ -2,6 +2,11 @@
 import { ref } from 'vue'
 import { ChevronDownIcon } from '@heroicons/vue/24/outline'
 
+// ============================================================================
+// COMPOSABLES
+// ============================================================================
+const { trackEvent } = useAnalytics()
+
 interface FaqItem {
   question: string
   answer: string
@@ -243,8 +248,18 @@ const faqItems: FaqItem[] = [
   },
 ]
 
+// ============================================================================
+// EVENT HANDLERS
+// ============================================================================
 const toggleItem = (idx: number) => {
+  const isOpening = openIndex.value !== idx
   openIndex.value = openIndex.value === idx ? null : idx
+
+  // Track FAQ interaction
+  trackEvent('faq_interaction', {
+    question_number: idx + 1, // 1-indexed for readability
+    action: isOpening ? 'open' : 'close',
+  })
 }
 </script>
 

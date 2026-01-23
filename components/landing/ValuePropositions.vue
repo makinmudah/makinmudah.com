@@ -2,16 +2,54 @@
 // ============================================================================
 // IMPORTS
 // ============================================================================
+import { ref, onMounted, onUnmounted } from 'vue'
 import { TagIcon, WindowIcon, UsersIcon } from '@heroicons/vue/24/outline'
+
+// ============================================================================
+// COMPOSABLES
+// ============================================================================
+const { trackEvent } = useAnalytics()
 
 // ============================================================================
 // COMPONENT LOGIC
 // ============================================================================
-// No state needed - presentational component
+const sectionRef = ref<HTMLElement | null>(null)
+let observer: IntersectionObserver | null = null
+let hasTracked = false
+
+onMounted(() => {
+  if (!sectionRef.value) return
+
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        // Track only once when section becomes visible
+        if (entry.isIntersecting && !hasTracked) {
+          hasTracked = true
+          trackEvent('value_prop_view', {
+            viewport_entry: true,
+          })
+        }
+      })
+    },
+    {
+      threshold: 0.5, // Trigger when 50% of section is visible
+    },
+  )
+
+  observer.observe(sectionRef.value)
+})
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect()
+  }
+})
 </script>
 
 <template>
   <section
+    ref="sectionRef"
     role="region"
     aria-label="Value Propositions"
     class="bg-gray-100 py-12 md:py-16 lg:py-20"

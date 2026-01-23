@@ -1,8 +1,41 @@
 <script setup lang="ts">
 // ============================================================================
-// IMPORTS
+// COMPOSABLES
 // ============================================================================
-// No imports needed for this presentational component
+const { trackEvent, setUserProperties } = useAnalytics()
+
+// ============================================================================
+// EVENT HANDLERS
+// ============================================================================
+function handleIntipYukClick() {
+  // Infer user type based on first CTA click
+  if (typeof window !== 'undefined' && !sessionStorage.getItem('user_type_inferred')) {
+    sessionStorage.setItem('user_type_inferred', 'business')
+    setUserProperties({ user_type_inferred: 'business' })
+  }
+
+  // Track CTA click event
+  trackEvent('cta_click', {
+    cta_label: 'Intip Yuk',
+    cta_location: 'hero',
+    destination_url: '/katalog#aplikasi',
+  })
+}
+
+function handleMulaiDuluClick() {
+  // Infer user type based on first CTA click
+  if (typeof window !== 'undefined' && !sessionStorage.getItem('user_type_inferred')) {
+    sessionStorage.setItem('user_type_inferred', 'student')
+    setUserProperties({ user_type_inferred: 'student' })
+  }
+
+  // Track CTA click event
+  trackEvent('cta_click', {
+    cta_label: 'Mulai Dulu',
+    cta_location: 'hero',
+    destination_url: '/katalog#mentoring',
+  })
+}
 </script>
 
 <template>
@@ -21,17 +54,19 @@
       <!-- Dual CTA Buttons -->
       <div class="flex flex-wrap items-center justify-center gap-4">
         <NuxtLink
-          to="/katalog"
+          to="/katalog#aplikasi"
           class="inline-block rounded-lg bg-teal-500 px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
           data-testid="cta-intip"
+          @click="handleIntipYukClick"
         >
           Intip Yuk
         </NuxtLink>
 
         <NuxtLink
-          to="/katalog"
+          to="/katalog#mentoring"
           class="inline-block rounded-lg bg-orange-500 px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
           data-testid="cta-mulai"
+          @click="handleMulaiDuluClick"
         >
           Mulai Dulu
         </NuxtLink>

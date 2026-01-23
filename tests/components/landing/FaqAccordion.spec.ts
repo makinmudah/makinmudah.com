@@ -1,7 +1,14 @@
 import { mount } from '@vue/test-utils'
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 
 import FaqAccordion from '@/components/landing/FaqAccordion.vue'
+
+// Mock useAnalytics
+vi.mock('~/composables/useAnalytics', () => ({
+  useAnalytics: () => ({
+    trackEvent: vi.fn(),
+  }),
+}))
 
 // Helper to create wrapper with global stubs
 const createWrapper = () => {

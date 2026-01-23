@@ -1,7 +1,14 @@
 import { mount } from '@vue/test-utils'
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 
 import ProblemSolution from '@/components/landing/ProblemSolution.vue'
+
+// Mock useAnalytics
+vi.mock('~/composables/useAnalytics', () => ({
+  useAnalytics: () => ({
+    trackEvent: vi.fn(),
+  }),
+}))
 
 // Helper to create wrapper with global stubs
 const createWrapper = () => {
@@ -44,7 +51,7 @@ describe('ProblemSolution', () => {
 
     it('renders CTA button', () => {
       const wrapper = createWrapper()
-      const ctaButton = wrapper.find('a[href="/katalog"]')
+      const ctaButton = wrapper.find('a[href="/katalog#aplikasi"]')
       expect(ctaButton.exists()).toBe(true)
     })
 
@@ -208,22 +215,22 @@ describe('ProblemSolution', () => {
   describe('CTA Button', () => {
     it('CTA button links to correct URL', () => {
       const wrapper = createWrapper()
-      const ctaButton = wrapper.find('a[href="/katalog"]')
+      const ctaButton = wrapper.find('a[href="/katalog#aplikasi"]')
 
       expect(ctaButton.exists()).toBe(true)
-      expect(ctaButton.attributes('href')).toBe('/katalog')
+      expect(ctaButton.attributes('href')).toBe('/katalog#aplikasi')
     })
 
     it('CTA button has correct text', () => {
       const wrapper = createWrapper()
-      const ctaButton = wrapper.find('a[href="/katalog"]')
+      const ctaButton = wrapper.find('a[href="/katalog#aplikasi"]')
 
       expect(ctaButton.text()).toBe('Intip Solusinya')
     })
 
     it('CTA button has correct styling classes', () => {
       const wrapper = createWrapper()
-      const ctaButton = wrapper.find('a[href="/katalog"]')
+      const ctaButton = wrapper.find('a[href="/katalog#aplikasi"]')
 
       expect(ctaButton.classes()).toContain('inline-block')
       expect(ctaButton.classes()).toContain('rounded-lg')
@@ -237,7 +244,7 @@ describe('ProblemSolution', () => {
 
     it('CTA button is centered', () => {
       const wrapper = createWrapper()
-      const ctaContainer = wrapper.find('a[href="/katalog"]').element.parentElement
+      const ctaContainer = wrapper.find('a[href="/katalog#aplikasi"]').element.parentElement
 
       expect(ctaContainer?.classList.contains('text-center')).toBe(true)
     })

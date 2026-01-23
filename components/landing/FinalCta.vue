@@ -1,8 +1,19 @@
 <script setup lang="ts">
 // ============================================================================
-// IMPORTS
+// COMPOSABLES
 // ============================================================================
-// No imports needed for this simple presentational component
+const { trackEvent } = useAnalytics()
+
+// ============================================================================
+// EVENT HANDLERS
+// ============================================================================
+function handleCtaClick() {
+  trackEvent('cta_click', {
+    cta_label: 'Intip Solusinya',
+    cta_location: 'final',
+    destination_url: '/katalog#aplikasi',
+  })
+}
 </script>
 
 <template>
@@ -14,8 +25,9 @@
         </h2>
 
         <NuxtLink
-          to="/katalog"
+          to="/katalog#aplikasi"
           class="inline-block rounded-lg bg-teal-500 px-8 py-4 text-lg font-semibold text-white transition-colors duration-200 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+          @click="handleCtaClick"
         >
           Intip Solusinya
         </NuxtLink>

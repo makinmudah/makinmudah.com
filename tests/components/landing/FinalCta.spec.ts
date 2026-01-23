@@ -1,7 +1,14 @@
 import { mount } from '@vue/test-utils'
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 
 import FinalCta from '@/components/landing/FinalCta.vue'
+
+// Mock useAnalytics
+vi.mock('~/composables/useAnalytics', () => ({
+  useAnalytics: () => ({
+    trackEvent: vi.fn(),
+  }),
+}))
 
 // Mock NuxtLink component
 const NuxtLinkStub = {
@@ -54,7 +61,7 @@ describe('FinalCta', () => {
   })
 
   describe('Navigation', () => {
-    it('CTA button links to /katalog', () => {
+    it('CTA button links to /katalog#aplikasi', () => {
       const wrapper = mount(FinalCta, {
         global: {
           stubs: {
@@ -64,7 +71,7 @@ describe('FinalCta', () => {
       })
 
       const button = wrapper.find('a')
-      expect(button.attributes('href')).toBe('/katalog')
+      expect(button.attributes('href')).toBe('/katalog#aplikasi')
     })
   })
 

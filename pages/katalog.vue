@@ -1,11 +1,20 @@
 <script setup lang="ts">
+import { ref, computed, onMounted } from 'vue'
+
 // ============================================================================
 // SEO META
 // ============================================================================
 useSeoMeta({
-  title: 'Katalog - Makin Mudah',
+  title: 'Aplikasi Bisnis & Program Mentoring IT - Makin Mudah',
   description:
-    'Jelajahi aplikasi bisnis dan program mentoring IT kami. Solusi terjangkau untuk UMKM dan pelajar Indonesia.',
+    'Jelajahi aplikasi bisnis untuk UMKM dan program mentoring IT terjangkau. Belajar dari mentor berpengalaman atau digitalisasi bisnis Anda dengan solusi sederhana.',
+  keywords:
+    'aplikasi bisnis, UMKM, mentoring IT Indonesia, belajar web development, bootcamp programming murah, solusi IT sederhana',
+  ogTitle: 'Aplikasi Bisnis & Program Mentoring IT - Makin Mudah',
+  ogDescription:
+    'Solusi IT terjangkau untuk bisnis dan belajar programming dengan mentor berpengalaman',
+  ogType: 'website',
+  ogUrl: 'https://makinmudah.com/katalog',
 })
 
 // ============================================================================
@@ -20,6 +29,8 @@ interface CatalogueItem {
   pricing: string
   status: 'available' | 'coming-soon'
   badge?: string
+  skillLevel?: 'Pemula' | 'Menengah' | 'Lanjut'
+  duration?: string
 }
 
 // ============================================================================
@@ -89,13 +100,15 @@ const catalogueItems = ref<CatalogueItem[]>([
     features: [
       '✅ Materi: HTML, CSS, JavaScript',
       '✅ Project: Portfolio website sendiri',
-      '✅ Sesi 1-on-1 dengan mentor',
+      '✅ Didampingi mentor berpengalaman',
       '✅ Support via WhatsApp grup',
       '✅ Sertifikat penyelesaian',
     ],
     pricing: 'Rp 499.000 (8 sesi) atau Rp 75.000/sesi',
     status: 'coming-soon',
     badge: 'Segera Hadir',
+    skillLevel: 'Pemula',
+    duration: '8 sesi',
   },
   {
     id: 'fullstack-bootcamp',
@@ -107,12 +120,14 @@ const catalogueItems = ref<CatalogueItem[]>([
       '✅ Frontend: Vue.js/React + Tailwind',
       '✅ Backend: Node.js + Express',
       '✅ Database: PostgreSQL/MongoDB',
-      '✅ Deploy production-ready app',
+      '✅ Didampingi mentor industry expert',
       '✅ Portfolio 3+ project lengkap',
     ],
     pricing: 'Rp 2.499.000 (3 bulan) atau Rp 899.000/bulan',
     status: 'coming-soon',
     badge: 'Segera Hadir',
+    skillLevel: 'Menengah',
+    duration: '3 bulan',
   },
   {
     id: 'it-consultation',
@@ -123,13 +138,15 @@ const catalogueItems = ref<CatalogueItem[]>([
     features: [
       '✅ Analisis kebutuhan bisnis',
       '✅ Rekomendasi solusi IT',
-      '✅ Panduan implementasi',
+      '✅ Didampingi IT consultant berpengalaman',
       '✅ Training karyawan',
       '✅ Support after implementation',
     ],
     pricing: 'Rp 150.000/jam atau paket custom',
     status: 'coming-soon',
     badge: 'Segera Hadir',
+    skillLevel: 'Lanjut',
+    duration: 'Fleksibel',
   },
 ])
 
@@ -143,6 +160,22 @@ const aplikasiItems = computed(() =>
 const mentoringItems = computed(() =>
   catalogueItems.value.filter(item => item.category === 'mentoring'),
 )
+
+// ============================================================================
+// SCROLL TO SECTION
+// ============================================================================
+onMounted(() => {
+  // Handle hash navigation (e.g., /katalog#aplikasi or /katalog#mentoring)
+  const hash = window.location.hash
+  if (hash) {
+    const element = document.querySelector(hash)
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 100)
+    }
+  }
+})
 </script>
 
 <template>
@@ -171,7 +204,7 @@ const mentoringItems = computed(() =>
     </section>
 
     <!-- Applications Section -->
-    <section class="py-12 md:py-16">
+    <section id="aplikasi" class="scroll-mt-20 py-12 md:py-16">
       <div class="container mx-auto px-4">
         <div class="mb-8">
           <h2 class="mb-2 text-3xl font-bold text-navy-900">Aplikasi untuk Bisnis</h2>
@@ -180,49 +213,12 @@ const mentoringItems = computed(() =>
           </p>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div
-            v-for="item in aplikasiItems"
-            :key="item.id"
-            class="relative rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-teal-500 hover:shadow-md"
-          >
-            <!-- Coming Soon Badge -->
-            <div
-              v-if="item.badge"
-              class="absolute right-4 top-4 rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white"
-            >
-              {{ item.badge }}
-            </div>
-
-            <h3 class="mb-3 text-xl font-bold text-navy-900">{{ item.title }}</h3>
-            <p class="mb-4 text-gray-700">{{ item.description }}</p>
-
-            <div class="mb-4 space-y-1">
-              <p
-                v-for="(feature, index) in item.features"
-                :key="index"
-                class="text-sm text-gray-600"
-              >
-                {{ feature }}
-              </p>
-            </div>
-
-            <div class="mt-auto">
-              <p class="mb-4 text-lg font-semibold text-teal-600">{{ item.pricing }}</p>
-              <button
-                class="w-full rounded-lg bg-teal-500 px-6 py-3 text-center font-semibold text-white transition-colors hover:bg-teal-600 disabled:cursor-not-allowed disabled:opacity-50"
-                :disabled="item.status === 'coming-soon'"
-              >
-                {{ item.status === 'coming-soon' ? 'Segera Hadir' : 'Pelajari Lebih Lanjut' }}
-              </button>
-            </div>
-          </div>
-        </div>
+        <CatalogueGrid :items="aplikasiItems" />
       </div>
     </section>
 
     <!-- Mentoring Section -->
-    <section class="bg-white py-12 md:py-16">
+    <section id="mentoring" class="scroll-mt-20 bg-white py-12 md:py-16">
       <div class="container mx-auto px-4">
         <div class="mb-8">
           <h2 class="mb-2 text-3xl font-bold text-navy-900">Program Belajar & Mentoring</h2>
@@ -231,44 +227,12 @@ const mentoringItems = computed(() =>
           </p>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div
-            v-for="item in mentoringItems"
-            :key="item.id"
-            class="relative rounded-lg border border-gray-200 bg-gray-50 p-6 shadow-sm transition-all hover:border-teal-500 hover:shadow-md"
-          >
-            <!-- Coming Soon Badge -->
-            <div
-              v-if="item.badge"
-              class="absolute right-4 top-4 rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white"
-            >
-              {{ item.badge }}
-            </div>
-
-            <h3 class="mb-3 text-xl font-bold text-navy-900">{{ item.title }}</h3>
-            <p class="mb-4 text-gray-700">{{ item.description }}</p>
-
-            <div class="mb-4 space-y-1">
-              <p
-                v-for="(feature, index) in item.features"
-                :key="index"
-                class="text-sm text-gray-600"
-              >
-                {{ feature }}
-              </p>
-            </div>
-
-            <div class="mt-auto">
-              <p class="mb-4 text-lg font-semibold text-teal-600">{{ item.pricing }}</p>
-              <button
-                class="w-full rounded-lg bg-teal-500 px-6 py-3 text-center font-semibold text-white transition-colors hover:bg-teal-600 disabled:cursor-not-allowed disabled:opacity-50"
-                :disabled="item.status === 'coming-soon'"
-              >
-                {{ item.status === 'coming-soon' ? 'Segera Hadir' : 'Mulai Belajar' }}
-              </button>
-            </div>
-          </div>
+        <!-- Trust Messaging -->
+        <div class="mb-8 text-center">
+          <p class="text-lg font-semibold text-teal-600">✨ Belajar Bareng, Bukan Sendirian</p>
         </div>
+
+        <CatalogueGrid :items="mentoringItems" />
       </div>
     </section>
 

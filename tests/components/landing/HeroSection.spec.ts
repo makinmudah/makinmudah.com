@@ -1,7 +1,15 @@
 import { mount } from '@vue/test-utils'
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 
 import HeroSection from '@/components/landing/HeroSection.vue'
+
+// Mock useAnalytics
+vi.mock('~/composables/useAnalytics', () => ({
+  useAnalytics: () => ({
+    trackEvent: vi.fn(),
+    setUserProperties: vi.fn(),
+  }),
+}))
 
 // Helper to create wrapper with global stubs
 const createWrapper = () => {
@@ -72,18 +80,18 @@ describe('HeroSection', () => {
   })
 
   describe('Navigation', () => {
-    it('"Intip Yuk" button navigates to /katalog', () => {
+    it('"Intip Yuk" button navigates to /katalog#aplikasi', () => {
       const wrapper = createWrapper()
       const intipBtn = wrapper.find('[data-testid="cta-intip"]')
 
-      expect(intipBtn.attributes('href')).toBe('/katalog')
+      expect(intipBtn.attributes('href')).toBe('/katalog#aplikasi')
     })
 
-    it('"Mulai Dulu" button navigates to /katalog', () => {
+    it('"Mulai Dulu" button navigates to /katalog#mentoring', () => {
       const wrapper = createWrapper()
       const mulaiBtn = wrapper.find('[data-testid="cta-mulai"]')
 
-      expect(mulaiBtn.attributes('href')).toBe('/katalog')
+      expect(mulaiBtn.attributes('href')).toBe('/katalog#mentoring')
     })
   })
 

@@ -160,6 +160,122 @@ Returns server status and timestamp:
 }
 ```
 
+## Analytics
+
+The application uses Google Analytics 4 (GA4) to track user behavior and measure key metrics.
+
+### Setup
+
+1. **Create a GA4 Property**:
+   - Go to [Google Analytics](https://analytics.google.com/)
+   - Create a new GA4 property
+   - Get your Measurement ID (format: `G-XXXXXXXXXX`)
+
+2. **Configure Environment Variables**:
+
+```env
+# Development (leave empty to disable tracking)
+NUXT_PUBLIC_GA_ID=
+NUXT_PUBLIC_GA_DEBUG=true
+
+# Production
+NUXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+NUXT_PUBLIC_GA_DEBUG=false
+```
+
+3. **Debug Mode**:
+   - When `NUXT_PUBLIC_GA_DEBUG=true`, events are logged to the console
+   - Useful for development and testing
+   - Set to `false` in production
+
+### Key Metrics Tracked
+
+#### 1. Page Views
+- **Event**: Automatic page view tracking
+- **Includes**: Page path, page title
+- **Triggers**: Initial page load and route changes (including hash navigation)
+
+#### 2. CTA Clicks
+- **Event**: `cta_click`
+- **Parameters**:
+  - `cta_label`: Button text (e.g., "Intip Yuk", "Mulai Dulu")
+  - `cta_location`: Where the CTA is located (e.g., "hero", "problem_solution", "final")
+  - `destination_url`: Where the button links to
+- **Locations**: Hero section, Problem-Solution section, Final CTA
+
+#### 3. User Type Inference
+- **Event**: `user_properties`
+- **Property**: `user_type_inferred` (values: "business" or "student")
+- **Logic**:
+  - "Intip Yuk" button → business user
+  - "Mulai Dulu" button → student user
+- **Storage**: Saved in sessionStorage to track across pages
+
+#### 4. Scroll Depth
+- **Event**: `scroll_depth`
+- **Parameter**: `depth_percentage` (values: 25, 50, 75, 100)
+- **Behavior**: Each milestone fires only once per page load
+- **Performance**: Uses `requestAnimationFrame` for smooth tracking
+
+#### 5. FAQ Interactions
+- **Event**: `faq_interaction`
+- **Parameters**:
+  - `question_number`: 1-indexed question number
+  - `action`: "open" or "close"
+
+#### 6. Catalogue Card Clicks
+- **Event**: `catalogue_card_click`
+- **Parameters**:
+  - `product_name`: Product title
+  - `catalogue_type`: "aplikasi" or "mentoring"
+  - `product_id`: Unique product identifier
+  - `product_status`: "available" or "coming-soon"
+
+#### 7. Value Proposition Views
+- **Event**: `value_prop_view`
+- **Parameter**: `viewport_entry`: true
+- **Trigger**: When Value Propositions section enters viewport (50% visible)
+- **Behavior**: Fires only once per page load
+
+### Privacy & Compliance
+
+- **Indonesian PDP Law Compliance**: Analytics storage consent set to "granted"
+- **No Auto-Tracking in Development**: GA4 script only loads when `NUXT_PUBLIC_GA_ID` is configured
+- **SSR Safe**: All tracking functions check for client-side environment
+
+### Event Naming Conventions
+
+- Use snake_case for event names (e.g., `scroll_depth`, `cta_click`)
+- Keep event names descriptive and concise
+- Use consistent parameter names across similar events
+- Always include contextual parameters (location, type, etc.)
+
+### Testing
+
+1. **Development Testing**:
+   - Set `NUXT_PUBLIC_GA_DEBUG=true`
+   - Check browser console for event logs
+   - Events show format: `[GA4 Debug] Event tracked: event_name { params }`
+
+2. **Production Testing**:
+   - Use [GA4 DebugView](https://support.google.com/analytics/answer/7201382)
+   - Install Google Analytics Debugger Chrome extension
+   - Monitor real-time events in GA4 dashboard
+
+### Implementation
+
+The analytics system is built with:
+
+- **`useAnalytics` composable**: Core tracking functions (`trackEvent`, `trackPageView`, `setUserProperties`)
+- **`useScrollTracking` composable**: Automated scroll depth tracking
+- **Component-level tracking**: Event handlers in Vue components
+- **Global page view tracking**: Automatic tracking in `app.vue`
+
+For implementation details, see:
+- `composables/useAnalytics.ts`
+- `composables/useScrollTracking.ts`
+- `app.vue` (script loading and page view tracking)
+
 ## Deployment
 
 The application is deployed at **makinmudah.com**.

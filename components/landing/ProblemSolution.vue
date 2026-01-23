@@ -1,14 +1,19 @@
 <script setup lang="ts">
 // ============================================================================
-// IMPORTS
+// COMPOSABLES
 // ============================================================================
-// No imports needed for this presentational component
-// Images will be in public/images/ directory
+const { trackEvent } = useAnalytics()
 
 // ============================================================================
-// COMPONENT LOGIC
+// EVENT HANDLERS
 // ============================================================================
-// No state needed - presentational component with static content
+function handleCtaClick() {
+  trackEvent('cta_click', {
+    cta_label: 'Intip Solusinya',
+    cta_location: 'problem_solution',
+    destination_url: '/katalog#aplikasi',
+  })
+}
 </script>
 
 <template>
@@ -96,8 +101,9 @@
       <!-- CTA Button -->
       <div class="text-center">
         <NuxtLink
-          to="/katalog"
+          to="/katalog#aplikasi"
           class="inline-block rounded-lg bg-teal-500 px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-teal-600 md:text-lg"
+          @click="handleCtaClick"
         >
           Intip Solusinya
         </NuxtLink>

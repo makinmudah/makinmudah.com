@@ -49,6 +49,8 @@ export default defineNuxtConfig({
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
       siteName: process.env.NUXT_PUBLIC_SITE_NAME || 'Makin Mudah',
+      gaId: process.env.NUXT_PUBLIC_GA_ID || '',
+      gaDebug: process.env.NUXT_PUBLIC_GA_DEBUG === 'true',
     },
   },
 })
