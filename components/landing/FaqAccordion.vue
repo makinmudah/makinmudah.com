@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { ChevronDownIcon } from '@heroicons/vue/24/outline'
+import { ref } from 'vue'
 
 // ============================================================================
 // COMPOSABLES
@@ -274,7 +274,7 @@ const toggleItem = (idx: number) => {
         <div v-for="(item, index) in faqItems" :key="index" class="overflow-hidden rounded-lg">
           <button
             type="button"
-            :aria-expanded="String(openIndex === index)"
+            :aria-expanded="openIndex === index"
             :aria-controls="`faq-answer-${index}`"
             class="flex w-full items-center justify-between rounded-lg bg-gray-50 px-6 py-4 text-left text-lg font-semibold text-navy-900 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500 md:text-xl"
             @click="toggleItem(index)"

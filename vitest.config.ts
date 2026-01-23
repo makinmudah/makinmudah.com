@@ -27,6 +27,7 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./', import.meta.url)),
       '~': fileURLToPath(new URL('./', import.meta.url)),
+      '#app': fileURLToPath(new URL('./node_modules/nuxt/dist/app', import.meta.url)),
     },
   },
 })
